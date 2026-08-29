@@ -1,0 +1,27 @@
+{
+  "evidence": "measured",
+  "programs": {
+    "oasis_anchor": {
+      "compiler_simulator_contract": "validated",
+      "cycles": 2560,
+      "design": "oasis",
+      "ir_sha256": "8fa5e002004c38af17feee5cf233c98be1bd63ea9d9edade33cb311c7e6c6e96",
+      "program": "oasis-gemm-1x4096x4096"
+    },
+    "omni_aw": {
+      "compiler_simulator_contract": "validated",
+      "cycles": 17952,
+      "design": "omni-lut",
+      "ir_sha256": "aff0df8f13c3980cb2cac14c0af32f6db97711dd7b59517fa5b51b6dbb0b867b",
+      "program": "omni-aw-gemm-1x128x2048"
+    },
+    "omni_decode_attention": {
+      "compiler_simulator_contract": "validated",
+      "cycles": 7127,
+      "design": "omni-lut",
+      "ir_sha256": "d2306de7524c5c02a0a112f35b5a2ca4a54c6484edfbbdf3dc9ed3bec6739bd9",
+      "program": "omni-attention-decode-q1-kv2048-d128"
+    }
+  },
+  "schema_version": 1
+}

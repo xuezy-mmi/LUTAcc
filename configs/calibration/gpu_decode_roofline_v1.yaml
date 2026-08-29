@@ -1,0 +1,23 @@
+name: gpu-decode-roofline-v1
+evidence: calibrated
+training_surface: OASIS arXiv v4 single-batch decode geomean headlines
+timebase_hz: 1000000000
+a100_fp16:
+  weight_bits: 16
+  effective_bandwidth_bytes_per_second: 1150000000000
+  peak_compute_ops_per_second: 312000000000000
+  active_power_w: 352.0
+  provenance: >-
+    Open roofline proxy. Effective bandwidth is 56.4% of the A100-80GB SXM
+    2.039-TB/s peak and active power is below its 400-W TDP. Coefficients are
+    calibrated to the two published OASIS A3/A4 geomean headlines; this is not
+    a native A100 measurement.
+quarot_w4a4:
+  weight_bits: 4
+  effective_bandwidth_bytes_per_second: 500000000000
+  peak_compute_ops_per_second: 120000000000000
+  active_power_w: 336.0
+  provenance: >-
+    Open A100 QuaRot-kernel roofline proxy including rotation/dequantization
+    utilization loss. Coefficients are calibrated to the two published OASIS
+    A3/A4 geomean headlines; this is not the authors' QuaRot implementation.

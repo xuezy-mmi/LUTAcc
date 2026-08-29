@@ -1,0 +1,16 @@
+name: omni-energy-proxy-v1
+evidence: inferred
+technology_nm: 28
+figlut_aw_pj_per_op: 0.20
+omni_aw_pj_per_op: 0.16
+fp16_aa_pj_per_op: 2.00
+omni_lut_aa_pj_per_op: 0.40
+dram_pj_per_byte: 20.0
+key_bits: 3.0
+value_bits: 3.0
+contexts: [2048, 4096, 8192]
+notes: >-
+  Mechanism-level equal-throughput energy proxy. Both designs pay identical
+  packed W4 weight traffic. FIGLUT pays FP16 AA-GEMM and FP16 KV traffic;
+  Omni-LUT pays LUT AA-GEMM and AS-Bit KV traffic. Coefficients are plausible
+  open 28-nm proxies, not author simulator constants or target-bar inputs.

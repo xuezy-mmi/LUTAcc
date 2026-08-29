@@ -1,0 +1,25 @@
+{
+  "commit": "8b0dedaf45f9bf528792561f87786aa827db94cc",
+  "evidence": "measured_open_proxy",
+  "mean_energy_pj_per_byte": 51.31686208871695,
+  "memspec": "bundled LPDDR5 x8 burstLength=8",
+  "read": {
+    "bytes_per_command": 8,
+    "command": "RD",
+    "commands": 256,
+    "energy_pj_per_byte": 54.35055800217849,
+    "total_energy_j": 1.1130994278846154e-07,
+    "transferred_bytes": 2048
+  },
+  "timing_note": "DRAMPower computes energy and does not validate trace timing.",
+  "tool": "tukl-msd/DRAMPower",
+  "version": "v6.0.0",
+  "write": {
+    "bytes_per_command": 8,
+    "command": "WR",
+    "commands": 256,
+    "energy_pj_per_byte": 48.28316617525542,
+    "total_energy_j": 9.888392432692309e-08,
+    "transferred_bytes": 2048
+  }
+}

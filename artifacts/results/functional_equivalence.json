@@ -1,0 +1,29 @@
+{
+  "oasis": {
+    "histogram_updates": 8192,
+    "lut_entries": 256,
+    "maximum_identity_error": 3.814697265625e-05,
+    "mean_identity_error": 6.0927122831344604e-06,
+    "seed": 20260829,
+    "shape": [
+      2,
+      128,
+      32
+    ]
+  },
+  "omni_lut": {
+    "capacity_reduction": 2.8287292817679557,
+    "compensated_output_rmse": 0.03812907636165619,
+    "fp16_cache_bytes": 32768,
+    "quantized_cache_bytes": 11584,
+    "seed": 20260830,
+    "shape": {
+      "batch": 1,
+      "dim": 32,
+      "heads": 2,
+      "kv": 128,
+      "query": 4
+    },
+    "uncompensated_output_rmse": 0.041762690991163254
+  }
+}

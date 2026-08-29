@@ -1,0 +1,672 @@
+{
+  "0.005": {
+    "clock_hz": 500000000,
+    "cycles": 2560,
+    "design": "oasis-a4",
+    "dram_read_bytes": 8192,
+    "dram_write_bytes": 8192,
+    "energy_mj": 0.04788155215024975,
+    "latency_us": 5.12,
+    "metadata": {
+      "core_cycles": 2560,
+      "cycle_ledger": {
+        "activation_quantization": 2048,
+        "concat": 256,
+        "error_compensation": 1024,
+        "index_distribution": 1024,
+        "lut_entries": 256,
+        "main_branch": 2304,
+        "merge": 256,
+        "outlier_branch": 1104,
+        "outlier_detection": 1104,
+        "outliers_per_token": 20,
+        "output_waves": 256,
+        "reduction": 2304,
+        "total": 2560
+      },
+      "dram_cycles": 6,
+      "energy_model": "oasis_arxiv_v4_28nm_stage_calibration",
+      "lookahead": true,
+      "memory_energy_nj": 550.5024,
+      "resident_weights": true,
+      "sram_traffic_bytes": {
+        "activation_index_buffer": 524288,
+        "lut": 2097152,
+        "output_buffer": 8192,
+        "weight_index_buffer": 8388608
+      },
+      "sram_traffic_percent": {
+        "activation_index_buffer": 4.758364312267658,
+        "lut": 19.033457249070633,
+        "output_buffer": 0.07434944237918216,
+        "weight_index_buffer": 76.13382899628253
+      },
+      "stage_energy_nj": {
+        "activation_quantization": 7263.239160839161,
+        "concat": 889.3762237762239,
+        "error_compensation": 1185.8349650349653,
+        "index_distribution": 3656.3244755244764,
+        "merge": 10919.563636363637,
+        "outlier_detection": 7062.07072927073,
+        "reduction": 16354.640559440562
+      },
+      "stage_energy_percent": {
+        "activation_quantization": 15.345611811199761,
+        "concat": 1.8790545074938485,
+        "error_compensation": 2.5054060099917983,
+        "index_distribution": 7.725001864141378,
+        "merge": 23.07061367534114,
+        "outlier_detection": 14.920587577361868,
+        "reduction": 34.553724554470215
+      }
+    },
+    "operations": 33554432,
+    "sram_read_bytes": 11018240,
+    "sram_write_bytes": 10240,
+    "stages": [
+      {
+        "busy_cycles": 1104,
+        "end_cycle": 1104,
+        "energy_nj": 7062.07072927073,
+        "metadata": {
+          "lookahead": true,
+          "resource_lane": 0
+        },
+        "name": "outlier_detection",
+        "operations": 6384,
+        "read_bytes": 0,
+        "resource": "orizuru",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 2304,
+        "end_cycle": 2304,
+        "energy_nj": 28163.580419580423,
+        "metadata": {
+          "overlapped_components": {
+            "activation_quantization": 2048,
+            "concat": 256,
+            "index_distribution": 1024,
+            "reduction": 2304
+          },
+          "resource_lane": 0
+        },
+        "name": "main_branch",
+        "operations": 16777216,
+        "read_bytes": 2621440,
+        "resource": "oasis_main",
+        "start_cycle": 0,
+        "write_bytes": 8192
+      },
+      {
+        "busy_cycles": 1024,
+        "end_cycle": 1024,
+        "energy_nj": 1185.8349650349653,
+        "metadata": {
+          "resource_lane": 0,
+          "streamed_after_orizuru": true
+        },
+        "name": "error_compensation",
+        "operations": 163840,
+        "read_bytes": 8388608,
+        "resource": "compensation_macs",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 256,
+        "end_cycle": 2560,
+        "energy_nj": 10919.563636363637,
+        "metadata": {
+          "resource_lane": 0
+        },
+        "name": "merge",
+        "operations": 4096,
+        "read_bytes": 16384,
+        "resource": "merge_macs",
+        "start_cycle": 2304,
+        "write_bytes": 8192
+      }
+    ],
+    "throughput_tops": 6.5536,
+    "tops_per_watt": 0.7007799558107053,
+    "workload": "gemm-1x4096x4096-b1"
+  },
+  "0.01": {
+    "clock_hz": 500000000,
+    "cycles": 2560,
+    "design": "oasis-a4",
+    "dram_read_bytes": 8192,
+    "dram_write_bytes": 8192,
+    "energy_mj": 0.0500097024,
+    "latency_us": 5.12,
+    "metadata": {
+      "core_cycles": 2560,
+      "cycle_ledger": {
+        "activation_quantization": 2048,
+        "concat": 256,
+        "error_compensation": 1536,
+        "index_distribution": 1024,
+        "lut_entries": 256,
+        "main_branch": 2304,
+        "merge": 256,
+        "outlier_branch": 1536,
+        "outlier_detection": 1344,
+        "outliers_per_token": 40,
+        "output_waves": 256,
+        "reduction": 2304,
+        "total": 2560
+      },
+      "dram_cycles": 6,
+      "energy_model": "oasis_arxiv_v4_28nm_stage_calibration",
+      "lookahead": true,
+      "memory_energy_nj": 550.5024,
+      "resident_weights": true,
+      "sram_traffic_bytes": {
+        "activation_index_buffer": 524288,
+        "lut": 2097152,
+        "output_buffer": 8192,
+        "weight_index_buffer": 8388608
+      },
+      "sram_traffic_percent": {
+        "activation_index_buffer": 4.758364312267658,
+        "lut": 19.033457249070633,
+        "output_buffer": 0.07434944237918216,
+        "weight_index_buffer": 76.13382899628253
+      },
+      "stage_energy_nj": {
+        "activation_quantization": 7263.239160839161,
+        "concat": 889.3762237762239,
+        "error_compensation": 1778.7524475524478,
+        "index_distribution": 3656.3244755244764,
+        "merge": 10919.563636363637,
+        "outlier_detection": 8597.303496503497,
+        "reduction": 16354.640559440562
+      },
+      "stage_energy_percent": {
+        "activation_quantization": 14.685314685314685,
+        "concat": 1.7982017982017984,
+        "error_compensation": 3.5964035964035967,
+        "index_distribution": 7.392607392607394,
+        "merge": 22.07792207792208,
+        "outlier_detection": 17.382617382617383,
+        "reduction": 33.06693306693307
+      }
+    },
+    "operations": 33554432,
+    "sram_read_bytes": 11018240,
+    "sram_write_bytes": 10240,
+    "stages": [
+      {
+        "busy_cycles": 1344,
+        "end_cycle": 1344,
+        "energy_nj": 8597.303496503497,
+        "metadata": {
+          "lookahead": true,
+          "resource_lane": 0
+        },
+        "name": "outlier_detection",
+        "operations": 6624,
+        "read_bytes": 0,
+        "resource": "orizuru",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 2304,
+        "end_cycle": 2304,
+        "energy_nj": 28163.580419580423,
+        "metadata": {
+          "overlapped_components": {
+            "activation_quantization": 2048,
+            "concat": 256,
+            "index_distribution": 1024,
+            "reduction": 2304
+          },
+          "resource_lane": 0
+        },
+        "name": "main_branch",
+        "operations": 16777216,
+        "read_bytes": 2621440,
+        "resource": "oasis_main",
+        "start_cycle": 0,
+        "write_bytes": 8192
+      },
+      {
+        "busy_cycles": 1536,
+        "end_cycle": 1536,
+        "energy_nj": 1778.7524475524478,
+        "metadata": {
+          "resource_lane": 0,
+          "streamed_after_orizuru": true
+        },
+        "name": "error_compensation",
+        "operations": 327680,
+        "read_bytes": 8388608,
+        "resource": "compensation_macs",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 256,
+        "end_cycle": 2560,
+        "energy_nj": 10919.563636363637,
+        "metadata": {
+          "resource_lane": 0
+        },
+        "name": "merge",
+        "operations": 4096,
+        "read_bytes": 16384,
+        "resource": "merge_macs",
+        "start_cycle": 2304,
+        "write_bytes": 8192
+      }
+    ],
+    "throughput_tops": 6.5536,
+    "tops_per_watt": 0.6709584418562747,
+    "workload": "gemm-1x4096x4096-b1"
+  },
+  "0.02": {
+    "clock_hz": 500000000,
+    "cycles": 3072,
+    "design": "oasis-a4",
+    "dram_read_bytes": 8192,
+    "dram_write_bytes": 8192,
+    "energy_mj": 0.05456246164075924,
+    "latency_us": 6.144,
+    "metadata": {
+      "core_cycles": 3072,
+      "cycle_ledger": {
+        "activation_quantization": 2048,
+        "concat": 256,
+        "error_compensation": 2816,
+        "index_distribution": 1024,
+        "lut_entries": 256,
+        "main_branch": 2304,
+        "merge": 256,
+        "outlier_branch": 2816,
+        "outlier_detection": 1824,
+        "outliers_per_token": 80,
+        "output_waves": 256,
+        "reduction": 2304,
+        "total": 3072
+      },
+      "dram_cycles": 6,
+      "energy_model": "oasis_arxiv_v4_28nm_stage_calibration",
+      "lookahead": true,
+      "memory_energy_nj": 550.5024,
+      "resident_weights": true,
+      "sram_traffic_bytes": {
+        "activation_index_buffer": 524288,
+        "lut": 2097152,
+        "output_buffer": 8192,
+        "weight_index_buffer": 8388608
+      },
+      "sram_traffic_percent": {
+        "activation_index_buffer": 4.758364312267658,
+        "lut": 19.033457249070633,
+        "output_buffer": 0.07434944237918216,
+        "weight_index_buffer": 76.13382899628253
+      },
+      "stage_energy_nj": {
+        "activation_quantization": 7263.239160839161,
+        "concat": 889.3762237762239,
+        "error_compensation": 3261.0461538461545,
+        "index_distribution": 3656.3244755244764,
+        "merge": 10919.563636363637,
+        "outlier_detection": 11667.769030969032,
+        "reduction": 16354.640559440562
+      },
+      "stage_energy_percent": {
+        "activation_quantization": 13.447464715107161,
+        "concat": 1.6466283324621016,
+        "error_compensation": 6.0376372190277054,
+        "index_distribution": 6.7694720334553065,
+        "merge": 20.216936748562468,
+        "outlier_detection": 21.602195504443284,
+        "reduction": 30.27966544694198
+      }
+    },
+    "operations": 33554432,
+    "sram_read_bytes": 11018240,
+    "sram_write_bytes": 10240,
+    "stages": [
+      {
+        "busy_cycles": 1824,
+        "end_cycle": 1824,
+        "energy_nj": 11667.769030969032,
+        "metadata": {
+          "lookahead": true,
+          "resource_lane": 0
+        },
+        "name": "outlier_detection",
+        "operations": 7104,
+        "read_bytes": 0,
+        "resource": "orizuru",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 2304,
+        "end_cycle": 2304,
+        "energy_nj": 28163.580419580423,
+        "metadata": {
+          "overlapped_components": {
+            "activation_quantization": 2048,
+            "concat": 256,
+            "index_distribution": 1024,
+            "reduction": 2304
+          },
+          "resource_lane": 0
+        },
+        "name": "main_branch",
+        "operations": 16777216,
+        "read_bytes": 2621440,
+        "resource": "oasis_main",
+        "start_cycle": 0,
+        "write_bytes": 8192
+      },
+      {
+        "busy_cycles": 2816,
+        "end_cycle": 2816,
+        "energy_nj": 3261.0461538461545,
+        "metadata": {
+          "resource_lane": 0,
+          "streamed_after_orizuru": true
+        },
+        "name": "error_compensation",
+        "operations": 655360,
+        "read_bytes": 8388608,
+        "resource": "compensation_macs",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 256,
+        "end_cycle": 3072,
+        "energy_nj": 10919.563636363637,
+        "metadata": {
+          "resource_lane": 0
+        },
+        "name": "merge",
+        "operations": 4096,
+        "read_bytes": 16384,
+        "resource": "merge_macs",
+        "start_cycle": 2816,
+        "write_bytes": 8192
+      }
+    ],
+    "throughput_tops": 5.461333333333333,
+    "tops_per_watt": 0.6149728401354636,
+    "workload": "gemm-1x4096x4096-b1"
+  },
+  "0.05": {
+    "clock_hz": 500000000,
+    "cycles": 7168,
+    "design": "oasis-a4",
+    "dram_read_bytes": 8192,
+    "dram_write_bytes": 8192,
+    "energy_mj": 0.06882424465774227,
+    "latency_us": 14.336,
+    "metadata": {
+      "core_cycles": 7168,
+      "cycle_ledger": {
+        "activation_quantization": 2048,
+        "concat": 256,
+        "error_compensation": 6912,
+        "index_distribution": 1024,
+        "lut_entries": 256,
+        "main_branch": 2304,
+        "merge": 256,
+        "outlier_branch": 6912,
+        "outlier_detection": 3312,
+        "outliers_per_token": 204,
+        "output_waves": 256,
+        "reduction": 2304,
+        "total": 7168
+      },
+      "dram_cycles": 6,
+      "energy_model": "oasis_arxiv_v4_28nm_stage_calibration",
+      "lookahead": true,
+      "memory_energy_nj": 550.5024,
+      "resident_weights": true,
+      "sram_traffic_bytes": {
+        "activation_index_buffer": 524288,
+        "lut": 2097152,
+        "output_buffer": 8192,
+        "weight_index_buffer": 8388608
+      },
+      "sram_traffic_percent": {
+        "activation_index_buffer": 4.758364312267658,
+        "lut": 19.033457249070633,
+        "output_buffer": 0.07434944237918216,
+        "weight_index_buffer": 76.13382899628253
+      },
+      "stage_energy_nj": {
+        "activation_quantization": 7263.239160839161,
+        "concat": 889.3762237762239,
+        "error_compensation": 8004.386013986015,
+        "index_distribution": 3656.3244755244764,
+        "merge": 10919.563636363637,
+        "outlier_detection": 21186.21218781219,
+        "reduction": 16354.640559440562
+      },
+      "stage_energy_percent": {
+        "activation_quantization": 10.638407857327474,
+        "concat": 1.3026621866115276,
+        "error_compensation": 11.723959679503748,
+        "index_distribution": 5.355388989402947,
+        "merge": 15.99379684673042,
+        "outlier_detection": 31.031274231067457,
+        "reduction": 23.954510209356425
+      }
+    },
+    "operations": 33554432,
+    "sram_read_bytes": 11018240,
+    "sram_write_bytes": 10240,
+    "stages": [
+      {
+        "busy_cycles": 3312,
+        "end_cycle": 3312,
+        "energy_nj": 21186.21218781219,
+        "metadata": {
+          "lookahead": true,
+          "resource_lane": 0
+        },
+        "name": "outlier_detection",
+        "operations": 8592,
+        "read_bytes": 0,
+        "resource": "orizuru",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 2304,
+        "end_cycle": 2304,
+        "energy_nj": 28163.580419580423,
+        "metadata": {
+          "overlapped_components": {
+            "activation_quantization": 2048,
+            "concat": 256,
+            "index_distribution": 1024,
+            "reduction": 2304
+          },
+          "resource_lane": 0
+        },
+        "name": "main_branch",
+        "operations": 16777216,
+        "read_bytes": 2621440,
+        "resource": "oasis_main",
+        "start_cycle": 0,
+        "write_bytes": 8192
+      },
+      {
+        "busy_cycles": 6912,
+        "end_cycle": 6912,
+        "energy_nj": 8004.386013986015,
+        "metadata": {
+          "resource_lane": 0,
+          "streamed_after_orizuru": true
+        },
+        "name": "error_compensation",
+        "operations": 1671168,
+        "read_bytes": 8388608,
+        "resource": "compensation_macs",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 256,
+        "end_cycle": 7168,
+        "energy_nj": 10919.563636363637,
+        "metadata": {
+          "resource_lane": 0
+        },
+        "name": "merge",
+        "operations": 4096,
+        "read_bytes": 16384,
+        "resource": "merge_macs",
+        "start_cycle": 6912,
+        "write_bytes": 8192
+      }
+    ],
+    "throughput_tops": 2.3405714285714287,
+    "tops_per_watt": 0.4875379623396324,
+    "workload": "gemm-1x4096x4096-b1"
+  },
+  "0.1": {
+    "clock_hz": 500000000,
+    "cycles": 13568,
+    "design": "oasis-a4",
+    "dram_read_bytes": 8192,
+    "dram_write_bytes": 8192,
+    "energy_mj": 0.09189508741498503,
+    "latency_us": 27.136,
+    "metadata": {
+      "core_cycles": 13568,
+      "cycle_ledger": {
+        "activation_quantization": 2048,
+        "concat": 256,
+        "error_compensation": 13312,
+        "index_distribution": 1024,
+        "lut_entries": 256,
+        "main_branch": 2304,
+        "merge": 256,
+        "outlier_branch": 13312,
+        "outlier_detection": 5760,
+        "outliers_per_token": 408,
+        "output_waves": 256,
+        "reduction": 2304,
+        "total": 13568
+      },
+      "dram_cycles": 6,
+      "energy_model": "oasis_arxiv_v4_28nm_stage_calibration",
+      "lookahead": true,
+      "memory_energy_nj": 550.5024,
+      "resident_weights": true,
+      "sram_traffic_bytes": {
+        "activation_index_buffer": 524288,
+        "lut": 2097152,
+        "output_buffer": 8192,
+        "weight_index_buffer": 8388608
+      },
+      "sram_traffic_percent": {
+        "activation_index_buffer": 4.758364312267658,
+        "lut": 19.033457249070633,
+        "output_buffer": 0.07434944237918216,
+        "weight_index_buffer": 76.13382899628253
+      },
+      "stage_energy_nj": {
+        "activation_quantization": 7263.239160839161,
+        "concat": 889.3762237762239,
+        "error_compensation": 15415.854545454547,
+        "index_distribution": 3656.3244755244764,
+        "merge": 10919.563636363637,
+        "outlier_detection": 36845.58641358641,
+        "reduction": 16354.640559440562
+      },
+      "stage_energy_percent": {
+        "activation_quantization": 7.951472065528165,
+        "concat": 0.9736496406769183,
+        "error_compensation": 16.87659377173325,
+        "index_distribution": 4.002781856116219,
+        "merge": 11.954253921644385,
+        "outlier_detection": 40.3369136851866,
+        "reduction": 17.904335059114445
+      }
+    },
+    "operations": 33554432,
+    "sram_read_bytes": 11018240,
+    "sram_write_bytes": 10240,
+    "stages": [
+      {
+        "busy_cycles": 5760,
+        "end_cycle": 5760,
+        "energy_nj": 36845.58641358641,
+        "metadata": {
+          "lookahead": true,
+          "resource_lane": 0
+        },
+        "name": "outlier_detection",
+        "operations": 11040,
+        "read_bytes": 0,
+        "resource": "orizuru",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 2304,
+        "end_cycle": 2304,
+        "energy_nj": 28163.580419580423,
+        "metadata": {
+          "overlapped_components": {
+            "activation_quantization": 2048,
+            "concat": 256,
+            "index_distribution": 1024,
+            "reduction": 2304
+          },
+          "resource_lane": 0
+        },
+        "name": "main_branch",
+        "operations": 16777216,
+        "read_bytes": 2621440,
+        "resource": "oasis_main",
+        "start_cycle": 0,
+        "write_bytes": 8192
+      },
+      {
+        "busy_cycles": 13312,
+        "end_cycle": 13312,
+        "energy_nj": 15415.854545454547,
+        "metadata": {
+          "resource_lane": 0,
+          "streamed_after_orizuru": true
+        },
+        "name": "error_compensation",
+        "operations": 3342336,
+        "read_bytes": 8388608,
+        "resource": "compensation_macs",
+        "start_cycle": 0,
+        "write_bytes": 0
+      },
+      {
+        "busy_cycles": 256,
+        "end_cycle": 13568,
+        "energy_nj": 10919.563636363637,
+        "metadata": {
+          "resource_lane": 0
+        },
+        "name": "merge",
+        "operations": 4096,
+        "read_bytes": 16384,
+        "resource": "merge_macs",
+        "start_cycle": 13312,
+        "write_bytes": 8192
+      }
+    ],
+    "throughput_tops": 1.2365283018867925,
+    "tops_per_watt": 0.3651384741435959,
+    "workload": "gemm-1x4096x4096-b1"
+  }
+}

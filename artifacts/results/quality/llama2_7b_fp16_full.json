@@ -1,0 +1,45 @@
+{
+  "activation_codebooks": 0,
+  "calibration_dataset": "c4",
+  "calibration_file": null,
+  "calibration_file_sha256": null,
+  "calibration_samples": 16,
+  "cuda": "12.1",
+  "evidence": "measured",
+  "force_zero_weight_centroid": false,
+  "gpu_names": [
+    "NVIDIA GeForce RTX 4090"
+  ],
+  "gradient_fisher": false,
+  "mean_weight_rmse": 0.0,
+  "metrics": {
+    "chunks": 165,
+    "elapsed_seconds": 35.60271739959717,
+    "evaluated_tokens": 337755,
+    "perplexity": 5.494735743448056,
+    "sequence_length": 2048,
+    "tokens_per_second": 9486.775860648817
+  },
+  "mode": "fp16",
+  "model": "NousResearch/Llama-2-7b-hf",
+  "model_revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+  "outlier_fraction": 0.01,
+  "peak_gpu_memory_bytes": 14288594944,
+  "skip_activation_quantization": false,
+  "skip_weight_quantization": false,
+  "timing": {
+    "activation_calibration_seconds": 0.0,
+    "evaluation_seconds": 35.60271739959717,
+    "model_load_seconds": 4.461559057235718,
+    "total_seconds": 42.28442573547363,
+    "weight_hessian_calibration_seconds": 0.0,
+    "weight_quantization_seconds": 0.0
+  },
+  "torch": "2.4.1+cu121",
+  "weight_energy_fisher_proxy": false,
+  "weight_input_hessian": false,
+  "weight_quantized_modules": 0,
+  "weight_quantizer": "kmeans",
+  "weight_scale_iterations": 0,
+  "weight_scale_method": "maxabs"
+}

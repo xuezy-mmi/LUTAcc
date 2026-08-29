@@ -1,0 +1,351 @@
+{
+  "additional_ppl_checks": [
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 5.494735743448056,
+      "name": "llama2_7b.fp16",
+      "pass": true,
+      "path": "artifacts/results/quality/llama2_7b_fp16_full.json",
+      "relative_error": 0.004522073756500297,
+      "target": 5.47
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 6.33932853041408,
+      "name": "llama2_7b.oasis_a4",
+      "pass": true,
+      "path": "artifacts/results/quality/llama2_7b_oasis_a4_zero_refit_full.json",
+      "relative_error": 0.07446246278204736,
+      "target": 5.9
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 7.310091992750768,
+      "name": "llama2_7b.oasis_a3",
+      "pass": true,
+      "path": "artifacts/results/quality/llama2_7b_oasis_a3_full.json",
+      "relative_error": 0.02401976064742757,
+      "target": 7.49
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 6.08226774119626,
+      "name": "llama3_8b.fp16",
+      "pass": true,
+      "path": "artifacts/results/quality/llama3_8b_fp16_full.json",
+      "relative_error": 0.009402648013638418,
+      "target": 6.14
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 7.534665282272457,
+      "name": "llama3_8b.oasis_a4",
+      "pass": true,
+      "path": "artifacts/results/quality/llama3_8b_oasis_a4_full.json",
+      "relative_error": 0.059727887802033336,
+      "target": 7.11
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 8.371765631804925,
+      "name": "llama3_8b.oasis_a3",
+      "pass": true,
+      "path": "artifacts/results/quality/llama3_8b_oasis_a3_full.json",
+      "relative_error": 0.023443231271995723,
+      "target": 8.18
+    }
+  ],
+  "all_available": true,
+  "models": [
+    "facebook/opt-6.7b",
+    "mistralai/Mistral-7B-v0.1",
+    "NousResearch/Llama-2-7b-hf",
+    "NousResearch/Meta-Llama-3-8B"
+  ],
+  "paper_all_models_ppl_available": true,
+  "paper_all_models_ppl_pass": true,
+  "pass": true,
+  "ppl_checks": [
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 10.757435377488125,
+      "name": "opt_6p7b.fp16",
+      "pass": true,
+      "path": "artifacts/results/quality/opt6.7b_fp16_full.json",
+      "relative_error": 0.009444256216562998,
+      "target": 10.86
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 12.713349672119344,
+      "name": "opt_6p7b.oasis_a4",
+      "pass": true,
+      "path": "artifacts/results/quality/opt6.7b_oasis_a4_full.json",
+      "relative_error": 0.09409205439925517,
+      "target": 11.62
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 13.282446418247785,
+      "name": "opt_6p7b.oasis_a3",
+      "pass": true,
+      "path": "artifacts/results/quality/opt6.7b_oasis_a3_full.json",
+      "relative_error": 0.059316825903131316,
+      "target": 14.12
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 5.305497267977958,
+      "name": "mistral_7b.fp16",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_full.json",
+      "relative_error": 0.010570908186277705,
+      "target": 5.25
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 6.114740615945423,
+      "name": "mistral_7b.oasis_a4",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_full.json",
+      "relative_error": 0.06343315059920399,
+      "target": 5.75
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 6.950515111856444,
+      "name": "mistral_7b.oasis_a3",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_full.json",
+      "relative_error": 0.04394565173914103,
+      "target": 7.27
+    }
+  ],
+  "ppl_pass": true,
+  "smoke_results_excluded": true,
+  "zero_shot_checks": [
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.8210010881392819,
+      "name": "mistral_7b.fp16.piqa",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.0053294304103685105,
+      "target": 0.8254
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7954545454545454,
+      "name": "mistral_7b.fp16.arc_easy",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.0015796341658844083,
+      "target": 0.7942
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.5392491467576792,
+      "name": "mistral_7b.fp16.arc_challenge",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.004708108605243151,
+      "target": 0.5418
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.8370030581039756,
+      "name": "mistral_7b.fp16.boolq",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.08153903360120886,
+      "target": 0.7739
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.8105954989046007,
+      "name": "mistral_7b.fp16.hellaswag",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.0014837411867446029,
+      "target": 0.8118
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7387529597474349,
+      "name": "mistral_7b.fp16.winogrande",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.01787694795608222,
+      "target": 0.7522
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.757009382851253,
+      "name": "mistral_7b.fp16.mean",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_fp16_zeroshot_full.json",
+      "relative_error": 0.009480441193829783,
+      "target": 0.7499
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.8144722524483133,
+      "name": "mistral_7b.oasis_a4.piqa",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.00795097143932596,
+      "target": 0.821
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7811447811447811,
+      "name": "mistral_7b.oasis_a4.arc_easy",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.003784092964252299,
+      "target": 0.7782
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.5008532423208191,
+      "name": "mistral_7b.oasis_a4.arc_challenge",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.05925386491206032,
+      "target": 0.5324
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7972477064220184,
+      "name": "mistral_7b.oasis_a4.boolq",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.05219441259339887,
+      "target": 0.7577
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.785202150965943,
+      "name": "mistral_7b.oasis_a4.hellaswag",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.020334184696265696,
+      "target": 0.8015
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7111286503551697,
+      "name": "mistral_7b.oasis_a4.winogrande",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.03115987690031374,
+      "target": 0.734
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7316747972761742,
+      "name": "mistral_7b.oasis_a4.mean",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a4_zeroshot_full.json",
+      "relative_error": 0.008570735398137875,
+      "target": 0.738
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7992383025027203,
+      "name": "mistral_7b.oasis_a3.piqa",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.0006739733350699335,
+      "target": 0.7987
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7592592592592593,
+      "name": "mistral_7b.oasis_a3.arc_easy",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.00490267462744523,
+      "target": 0.763
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.4761092150170648,
+      "name": "mistral_7b.oasis_a3.arc_challenge",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.03465284870830333,
+      "target": 0.4932
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.781651376146789,
+      "name": "mistral_7b.oasis_a3.boolq",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.07031545412404366,
+      "target": 0.7303
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7701653057159928,
+      "name": "mistral_7b.oasis_a3.hellaswag",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.019896531285323506,
+      "target": 0.7858
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.6779794790844514,
+      "name": "mistral_7b.oasis_a3.winogrande",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.03914472918870261,
+      "target": 0.7056
+    },
+    {
+      "available": true,
+      "full_contract": true,
+      "measured": 0.7107338229543797,
+      "name": "mistral_7b.oasis_a3.mean",
+      "pass": true,
+      "path": "artifacts/results/quality/mistral7b_oasis_a3_zeroshot_full.json",
+      "relative_error": 0.0028986771122619078,
+      "target": 0.7128
+    }
+  ],
+  "zero_shot_pass": true
+}

@@ -1,0 +1,61 @@
+schema_version: 1
+sequence_length: 2048
+outlier_fraction: 0.01
+calibration_samples: 16
+calibration_file: /data3/docker_cache/LUTAcc/calibration/c4_validation_16.json
+calibration_sha256: b2e620a01e1c5214998562ac7d9ba792a1619e0bbe73cb046a7895fe2eb034af
+activation_weighting: weight_energy_fisher_proxy
+weight_quantizer: kmeans
+weight_scale_method: maxabs
+weight_scale_iterations: 0
+models:
+  opt_6p7b:
+    hf_id: facebook/opt-6.7b
+    force_zero_weight_centroid: false
+    targets:
+      fp16: 10.86
+      oasis_a4: 11.62
+      oasis_a3: 14.12
+  mistral_7b:
+    hf_id: mistralai/Mistral-7B-v0.1
+    force_zero_weight_centroid: true
+    targets:
+      fp16: 5.25
+      oasis_a4: 5.75
+      oasis_a3: 7.27
+  llama2_7b:
+    hf_id: NousResearch/Llama-2-7b-hf
+    revision: 8efe6c9b93655b934e27bd9981e3ec13e55aee9d
+    source_note: ungated mirror of the paper's Meta Llama-2-7b-hf base weights
+    force_zero_weight_centroid: true
+    mode_overrides:
+      oasis_a4:
+        weight_scale_iterations: 1
+        zero_centroid_refit_iterations: 8
+      oasis_a3:
+        weight_scale_iterations: 0
+        zero_centroid_refit_iterations: 0
+    targets:
+      fp16: 5.47
+      oasis_a4: 5.90
+      oasis_a3: 7.49
+  llama3_8b:
+    hf_id: NousResearch/Meta-Llama-3-8B
+    revision: 315b20096dc791d381d514deb5f8bd9c8d6d3061
+    source_note: ungated mirror of the paper's Meta-Llama-3-8B base weights
+    force_zero_weight_centroid: true
+    mode_overrides:
+      oasis_a4:
+        weight_scale_iterations: 1
+        zero_centroid_refit_iterations: 8
+      oasis_a3:
+        weight_scale_iterations: 0
+        zero_centroid_refit_iterations: 0
+    targets:
+      fp16: 6.14
+      oasis_a4: 7.11
+      oasis_a3: 8.18
+notes: >-
+  Exact-zero remains a compiler codebook constraint, not a different numerical
+  format. It is selected for Mistral by calibration and disabled for OPT; both
+  use one shared 16-entry weight codebook per matrix and per-output scales.

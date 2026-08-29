@@ -1,0 +1,1206 @@
+{
+  "decode": {
+    "128": {
+      "clock_hz": 500000000,
+      "cycles": 2532,
+      "design": "omni-lut",
+      "dram_read_bytes": 2048,
+      "dram_write_bytes": 2816,
+      "energy_mj": 0.007659300000000002,
+      "latency_us": 5.064,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 2532,
+        "dataflow": "decode_os_v",
+        "dataflow_issue_efficiency": 0.875,
+        "dram_cycles": 38,
+        "key_cache_bytes": 49152,
+        "kv_streamed_from_dram": false,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 49152
+      },
+      "operations": 529408,
+      "sram_read_bytes": 108544,
+      "sram_write_bytes": 6912,
+      "stages": [
+        {
+          "busy_cycles": 16,
+          "end_cycle": 16,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 2048,
+          "read_bytes": 4096,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 768
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 48,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 2048,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 16,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 1164,
+          "end_cycle": 1212,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 262144,
+          "read_bytes": 51200,
+          "resource": "lut_pe_array",
+          "start_cycle": 48,
+          "write_bytes": 2048
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 1244,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 5120,
+          "read_bytes": 2048,
+          "resource": "special_function",
+          "start_cycle": 1212,
+          "write_bytes": 2048
+        },
+        {
+          "busy_cycles": 128,
+          "end_cycle": 1372,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 8192,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 1244,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 1160,
+          "end_cycle": 2532,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 262144,
+          "read_bytes": 51200,
+          "resource": "lut_pe_array",
+          "start_cycle": 1372,
+          "write_bytes": 2048
+        }
+      ],
+      "throughput_tops": 0.1045434439178515,
+      "tops_per_watt": 0.06911963234238115,
+      "workload": "attention-decode-q1-kv128-d128-b1-h8"
+    },
+    "16384": {
+      "clock_hz": 500000000,
+      "cycles": 98342,
+      "design": "omni-lut",
+      "dram_read_bytes": 12584960,
+      "dram_write_bytes": 2816,
+      "energy_mj": 0.165199025,
+      "latency_us": 196.684,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 41445,
+        "dataflow": "decode_os_v",
+        "dataflow_issue_efficiency": 0.875,
+        "dram_cycles": 98342,
+        "key_cache_bytes": 6291456,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 6,
+        "value_cache_bytes": 6291456
+      },
+      "operations": 67764224,
+      "sram_read_bytes": 13113344,
+      "sram_write_bytes": 527104,
+      "stages": [
+        {
+          "busy_cycles": 16,
+          "end_cycle": 16,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 2048,
+          "read_bytes": 4096,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 768
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 48,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 2048,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 16,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 10726,
+          "end_cycle": 10774,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 33554432,
+          "read_bytes": 6293504,
+          "resource": "lut_pe_array",
+          "start_cycle": 48,
+          "write_bytes": 262144
+        },
+        {
+          "busy_cycles": 4096,
+          "end_cycle": 14870,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 655360,
+          "read_bytes": 262144,
+          "resource": "special_function",
+          "start_cycle": 10774,
+          "write_bytes": 262144
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 31254,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 14870,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 10191,
+          "end_cycle": 41445,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 33554432,
+          "read_bytes": 6553600,
+          "resource": "lut_pe_array",
+          "start_cycle": 31254,
+          "write_bytes": 2048
+        }
+      ],
+      "throughput_tops": 0.3445334851843566,
+      "tops_per_watt": 0.4101974814923998,
+      "workload": "attention-decode-q1-kv16384-d128-b1-h8"
+    },
+    "2048": {
+      "clock_hz": 500000000,
+      "cycles": 7127,
+      "design": "omni-lut",
+      "dram_read_bytes": 2048,
+      "dram_write_bytes": 2816,
+      "energy_mj": 0.021559175000000003,
+      "latency_us": 14.254,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 7127,
+        "dataflow": "decode_os_v",
+        "dataflow_issue_efficiency": 0.875,
+        "dram_cycles": 38,
+        "key_cache_bytes": 786432,
+        "kv_streamed_from_dram": false,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 786432
+      },
+      "operations": 8470528,
+      "sram_read_bytes": 1644544,
+      "sram_write_bytes": 68352,
+      "stages": [
+        {
+          "busy_cycles": 16,
+          "end_cycle": 16,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 2048,
+          "read_bytes": 4096,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 768
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 48,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 2048,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 16,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 2293,
+          "end_cycle": 2341,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 4194304,
+          "read_bytes": 788480,
+          "resource": "lut_pe_array",
+          "start_cycle": 48,
+          "write_bytes": 32768
+        },
+        {
+          "busy_cycles": 512,
+          "end_cycle": 2853,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 81920,
+          "read_bytes": 32768,
+          "resource": "special_function",
+          "start_cycle": 2341,
+          "write_bytes": 32768
+        },
+        {
+          "busy_cycles": 2048,
+          "end_cycle": 4901,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 131072,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 2853,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 2226,
+          "end_cycle": 7127,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 4194304,
+          "read_bytes": 819200,
+          "resource": "lut_pe_array",
+          "start_cycle": 4901,
+          "write_bytes": 2048
+        }
+      ],
+      "throughput_tops": 0.5942562087834994,
+      "tops_per_watt": 0.39289666696429704,
+      "workload": "attention-decode-q1-kv2048-d128-b1-h8"
+    },
+    "512": {
+      "clock_hz": 500000000,
+      "cycles": 3451,
+      "design": "omni-lut",
+      "dram_read_bytes": 2048,
+      "dram_write_bytes": 2816,
+      "energy_mj": 0.010439275000000001,
+      "latency_us": 6.902,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 3451,
+        "dataflow": "decode_os_v",
+        "dataflow_issue_efficiency": 0.875,
+        "dram_cycles": 38,
+        "key_cache_bytes": 196608,
+        "kv_streamed_from_dram": false,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 196608
+      },
+      "operations": 2117632,
+      "sram_read_bytes": 415744,
+      "sram_write_bytes": 19200,
+      "stages": [
+        {
+          "busy_cycles": 16,
+          "end_cycle": 16,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 2048,
+          "read_bytes": 4096,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 768
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 48,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 2048,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 16,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 1390,
+          "end_cycle": 1438,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 1048576,
+          "read_bytes": 198656,
+          "resource": "lut_pe_array",
+          "start_cycle": 48,
+          "write_bytes": 8192
+        },
+        {
+          "busy_cycles": 128,
+          "end_cycle": 1566,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 20480,
+          "read_bytes": 8192,
+          "resource": "special_function",
+          "start_cycle": 1438,
+          "write_bytes": 8192
+        },
+        {
+          "busy_cycles": 512,
+          "end_cycle": 2078,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 32768,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 1566,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 1373,
+          "end_cycle": 3451,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 1048576,
+          "read_bytes": 204800,
+          "resource": "lut_pe_array",
+          "start_cycle": 2078,
+          "write_bytes": 2048
+        }
+      ],
+      "throughput_tops": 0.3068142567371776,
+      "tops_per_watt": 0.20285240114854716,
+      "workload": "attention-decode-q1-kv512-d128-b1-h8"
+    },
+    "8192": {
+      "clock_hz": 500000000,
+      "cycles": 49190,
+      "design": "omni-lut",
+      "dram_read_bytes": 6293504,
+      "dram_write_bytes": 2816,
+      "energy_mj": 0.08519937500000001,
+      "latency_us": 98.38000000000001,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 21835,
+        "dataflow": "decode_os_v",
+        "dataflow_issue_efficiency": 0.875,
+        "dram_cycles": 49190,
+        "key_cache_bytes": 3145728,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 3,
+        "value_cache_bytes": 3145728
+      },
+      "operations": 33882112,
+      "sram_read_bytes": 6559744,
+      "sram_write_bytes": 264960,
+      "stages": [
+        {
+          "busy_cycles": 16,
+          "end_cycle": 16,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 2048,
+          "read_bytes": 4096,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 768
+        },
+        {
+          "busy_cycles": 32,
+          "end_cycle": 48,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 2048,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 16,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 5907,
+          "end_cycle": 5955,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 16777216,
+          "read_bytes": 3147776,
+          "resource": "lut_pe_array",
+          "start_cycle": 48,
+          "write_bytes": 131072
+        },
+        {
+          "busy_cycles": 2048,
+          "end_cycle": 8003,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 327680,
+          "read_bytes": 131072,
+          "resource": "special_function",
+          "start_cycle": 5955,
+          "write_bytes": 131072
+        },
+        {
+          "busy_cycles": 8192,
+          "end_cycle": 16195,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 524288,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 8003,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 5640,
+          "end_cycle": 21835,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "decode_os_v",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 16777216,
+          "read_bytes": 3276800,
+          "resource": "lut_pe_array",
+          "start_cycle": 16195,
+          "write_bytes": 2048
+        }
+      ],
+      "throughput_tops": 0.34440040658670457,
+      "tops_per_watt": 0.39768028814765355,
+      "workload": "attention-decode-q1-kv8192-d128-b1-h8"
+    }
+  },
+  "prefill": {
+    "128": {
+      "clock_hz": 500000000,
+      "cycles": 51712,
+      "design": "omni-lut",
+      "dram_read_bytes": 360448,
+      "dram_write_bytes": 360448,
+      "energy_mj": 0.1564288,
+      "latency_us": 103.424,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 51712,
+        "dataflow": "prefill_ws",
+        "dataflow_issue_efficiency": 1.0,
+        "dram_cycles": 5632,
+        "key_cache_bytes": 49152,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 49152
+      },
+      "operations": 67764224,
+      "sram_read_bytes": 1409024,
+      "sram_write_bytes": 884736,
+      "stages": [
+        {
+          "busy_cycles": 2048,
+          "end_cycle": 2048,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 262144,
+          "read_bytes": 524288,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 98304
+        },
+        {
+          "busy_cycles": 4096,
+          "end_cycle": 6144,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 262144,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 2048,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 12544,
+          "end_cycle": 18688,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 33554432,
+          "read_bytes": 311296,
+          "resource": "lut_pe_array",
+          "start_cycle": 6144,
+          "write_bytes": 262144
+        },
+        {
+          "busy_cycles": 4096,
+          "end_cycle": 22784,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 655360,
+          "read_bytes": 262144,
+          "resource": "special_function",
+          "start_cycle": 18688,
+          "write_bytes": 262144
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 39168,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 22784,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 12544,
+          "end_cycle": 51712,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 33554432,
+          "read_bytes": 311296,
+          "resource": "lut_pe_array",
+          "start_cycle": 39168,
+          "write_bytes": 262144
+        }
+      ],
+      "throughput_tops": 0.6552079207920792,
+      "tops_per_watt": 0.43319531953195317,
+      "workload": "attention-prefill-q128-kv128-d128-b1-h8"
+    },
+    "16384": {
+      "clock_hz": 500000000,
+      "cycles": 19187712,
+      "design": "omni-lut",
+      "dram_read_bytes": 13631488,
+      "dram_write_bytes": 13631488,
+      "energy_mj": 58.0428288,
+      "latency_us": 38375.424,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 19187712,
+        "dataflow": "prefill_ws",
+        "dataflow_issue_efficiency": 1.0,
+        "dram_cycles": 212992,
+        "key_cache_bytes": 6291456,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 6,
+        "value_cache_bytes": 6291456
+      },
+      "operations": 34695282688,
+      "sram_read_bytes": 349175808,
+      "sram_write_bytes": 282066944,
+      "stages": [
+        {
+          "busy_cycles": 262144,
+          "end_cycle": 262144,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 33554432,
+          "read_bytes": 67108864,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 12582912
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 278528,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 262144,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 4211712,
+          "end_cycle": 4490240,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 17179869184,
+          "read_bytes": 7340032,
+          "resource": "lut_pe_array",
+          "start_cycle": 278528,
+          "write_bytes": 134217728
+        },
+        {
+          "busy_cycles": 2097152,
+          "end_cycle": 6587392,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 335544320,
+          "read_bytes": 134217728,
+          "resource": "special_function",
+          "start_cycle": 4490240,
+          "write_bytes": 134217728
+        },
+        {
+          "busy_cycles": 8388608,
+          "end_cycle": 14976000,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 536870912,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 6587392,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 4211712,
+          "end_cycle": 19187712,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 17179869184,
+          "read_bytes": 140509184,
+          "resource": "lut_pe_array",
+          "start_cycle": 14976000,
+          "write_bytes": 1048576
+        }
+      ],
+      "throughput_tops": 0.9041016116981536,
+      "tops_per_watt": 0.5977531317012585,
+      "workload": "attention-prefill-q512-kv16384-d128-b1-h8"
+    },
+    "2048": {
+      "clock_hz": 500000000,
+      "cycles": 2443264,
+      "design": "omni-lut",
+      "dram_read_bytes": 2621440,
+      "dram_write_bytes": 2621440,
+      "energy_mj": 7.3908736,
+      "latency_us": 4886.528,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 2443264,
+        "dataflow": "prefill_ws",
+        "dataflow_issue_efficiency": 1.0,
+        "dram_cycles": 40960,
+        "key_cache_bytes": 786432,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 786432
+      },
+      "operations": 4336910336,
+      "sram_read_bytes": 44564480,
+      "sram_write_bytes": 36175872,
+      "stages": [
+        {
+          "busy_cycles": 32768,
+          "end_cycle": 32768,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 4194304,
+          "read_bytes": 8388608,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 1572864
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 49152,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 32768,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 541696,
+          "end_cycle": 590848,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 2147483648,
+          "read_bytes": 1835008,
+          "resource": "lut_pe_array",
+          "start_cycle": 49152,
+          "write_bytes": 16777216
+        },
+        {
+          "busy_cycles": 262144,
+          "end_cycle": 852992,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 41943040,
+          "read_bytes": 16777216,
+          "resource": "special_function",
+          "start_cycle": 590848,
+          "write_bytes": 16777216
+        },
+        {
+          "busy_cycles": 1048576,
+          "end_cycle": 1901568,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 67108864,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 852992,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 541696,
+          "end_cycle": 2443264,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 2147483648,
+          "read_bytes": 17563648,
+          "resource": "lut_pe_array",
+          "start_cycle": 1901568,
+          "write_bytes": 1048576
+        }
+      ],
+      "throughput_tops": 0.8875238893545683,
+      "tops_per_watt": 0.5867926541187228,
+      "workload": "attention-prefill-q512-kv2048-d128-b1-h8"
+    },
+    "512": {
+      "clock_hz": 500000000,
+      "cycles": 649216,
+      "design": "omni-lut",
+      "dram_read_bytes": 1441792,
+      "dram_write_bytes": 1441792,
+      "energy_mj": 1.9638784000000002,
+      "latency_us": 1298.432,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 649216,
+        "dataflow": "prefill_ws",
+        "dataflow_issue_efficiency": 1.0,
+        "dram_cycles": 22528,
+        "key_cache_bytes": 196608,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 1,
+        "value_cache_bytes": 196608
+      },
+      "operations": 1084227584,
+      "sram_read_bytes": 11927552,
+      "sram_write_bytes": 9830400,
+      "stages": [
+        {
+          "busy_cycles": 8192,
+          "end_cycle": 8192,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 1048576,
+          "read_bytes": 2097152,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 393216
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 24576,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 8192,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 148480,
+          "end_cycle": 173056,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 536870912,
+          "read_bytes": 1245184,
+          "resource": "lut_pe_array",
+          "start_cycle": 24576,
+          "write_bytes": 4194304
+        },
+        {
+          "busy_cycles": 65536,
+          "end_cycle": 238592,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 10485760,
+          "read_bytes": 4194304,
+          "resource": "special_function",
+          "start_cycle": 173056,
+          "write_bytes": 4194304
+        },
+        {
+          "busy_cycles": 262144,
+          "end_cycle": 500736,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 16777216,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 238592,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 148480,
+          "end_cycle": 649216,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 536870912,
+          "read_bytes": 4390912,
+          "resource": "lut_pe_array",
+          "start_cycle": 500736,
+          "write_bytes": 1048576
+        }
+      ],
+      "throughput_tops": 0.8350283911671925,
+      "tops_per_watt": 0.5520848867221106,
+      "workload": "attention-prefill-q512-kv512-d128-b1-h8"
+    },
+    "8192": {
+      "clock_hz": 500000000,
+      "cycles": 9619456,
+      "design": "omni-lut",
+      "dram_read_bytes": 7340032,
+      "dram_write_bytes": 7340032,
+      "energy_mj": 29.098854400000004,
+      "latency_us": 19238.912,
+      "metadata": {
+        "array_shape": [
+          32,
+          4
+        ],
+        "average_key_bits": 3.0,
+        "average_value_bits": 3.0,
+        "configuration_evidence": "inferred",
+        "core_cycles": 9619456,
+        "dataflow": "prefill_ws",
+        "dataflow_issue_efficiency": 1.0,
+        "dram_cycles": 114688,
+        "key_cache_bytes": 3145728,
+        "kv_streamed_from_dram": true,
+        "kv_tile_count": 3,
+        "value_cache_bytes": 3145728
+      },
+      "operations": 17347641344,
+      "sram_read_bytes": 175112192,
+      "sram_write_bytes": 141557760,
+      "stages": [
+        {
+          "busy_cycles": 131072,
+          "end_cycle": 131072,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "bqu_kv",
+          "operations": 16777216,
+          "read_bytes": 33554432,
+          "resource": "bqu",
+          "start_cycle": 0,
+          "write_bytes": 6291456
+        },
+        {
+          "busy_cycles": 16384,
+          "end_cycle": 147456,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_qk",
+          "operations": 1048576,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 131072,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 2114560,
+          "end_cycle": 2262016,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "qk_lut_array",
+          "operations": 8589934592,
+          "read_bytes": 4194304,
+          "resource": "lut_pe_array",
+          "start_cycle": 147456,
+          "write_bytes": 67108864
+        },
+        {
+          "busy_cycles": 1048576,
+          "end_cycle": 3310592,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "softmax",
+          "operations": 167772160,
+          "read_bytes": 67108864,
+          "resource": "special_function",
+          "start_cycle": 2262016,
+          "write_bytes": 67108864
+        },
+        {
+          "busy_cycles": 4194304,
+          "end_cycle": 7504896,
+          "energy_nj": 0.0,
+          "metadata": {
+            "resource_lane": 0
+          },
+          "name": "lgu_pv",
+          "operations": 268435456,
+          "read_bytes": 0,
+          "resource": "lgu",
+          "start_cycle": 3310592,
+          "write_bytes": 0
+        },
+        {
+          "busy_cycles": 2114560,
+          "end_cycle": 9619456,
+          "energy_nj": 0.0,
+          "metadata": {
+            "dataflow": "prefill_ws",
+            "resource_lane": 0
+          },
+          "name": "pv_lut_array",
+          "operations": 8589934592,
+          "read_bytes": 70254592,
+          "resource": "lut_pe_array",
+          "start_cycle": 7504896,
+          "write_bytes": 1048576
+        }
+      ],
+      "throughput_tops": 0.9016955503512881,
+      "tops_per_watt": 0.5961623473396945,
+      "workload": "attention-prefill-q512-kv8192-d128-b1-h8"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "paper": {
+    "title": "Omni-LUT: Energy-Efficient LUT-Based Accelerator with Hardware-Aware KV Cache Quantization",
+    "doi": "10.1109/ISCA66397.2026.00037",
+    "ieee_document": "11617798",
+    "source": "https://ieeexplore.ieee.org/document/11617798/"
+  },
+  "reported": {
+    "evidence": "reported",
+    "supports_aw_gemm": true,
+    "supports_aa_gemm": true,
+    "offline_online_kv_quantization": true,
+    "quantization_compensation_in_lut_creation": true,
+    "phase_adaptive_hybrid_stationary_array": true,
+    "energy_efficiency_improvement_vs_sota_lut_min": 1.25,
+    "energy_efficiency_improvement_vs_sota_lut_max": 1.91
+  },
+  "brief_supplied_architecture": {
+    "evidence": "inferred",
+    "key_quantization": true,
+    "value_quantization": true,
+    "as_bit": true,
+    "bqu": true,
+    "lgu": true,
+    "array_rows": 32,
+    "array_columns": 4,
+    "prefill_dataflow": "weight_stationary",
+    "decode_dataflow": "output_stationary_value"
+  },
+  "missing_public_numeric_surface": {
+    "evidence": "reported_limit",
+    "full_paper_publicly_accessible": false,
+    "note": "The IEEE abstract supplies the 1.25x-1.91x range but not per-workload bars or the full hardware table."
+  }
+}

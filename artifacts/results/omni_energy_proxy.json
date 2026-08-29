@@ -1,0 +1,53 @@
+{
+  "configuration": {
+    "contexts": [
+      2048,
+      4096,
+      8192
+    ],
+    "dram_pj_per_byte": 20.0,
+    "evidence": "inferred",
+    "figlut_aw_pj_per_op": 0.2,
+    "fp16_aa_pj_per_op": 2.0,
+    "key_bits": 3.0,
+    "name": "omni-energy-proxy-v1",
+    "notes": "Mechanism-level equal-throughput energy proxy. Both designs pay identical packed W4 weight traffic. FIGLUT pays FP16 AA-GEMM and FP16 KV traffic; Omni-LUT pays LUT AA-GEMM and AS-Bit KV traffic. Coefficients are plausible open 28-nm proxies, not author simulator constants or target-bar inputs.",
+    "omni_aw_pj_per_op": 0.16,
+    "omni_lut_aa_pj_per_op": 0.4,
+    "technology_nm": 28,
+    "value_bits": 3.0
+  },
+  "evidence": "predicted_from_inferred_28nm_coefficients",
+  "maximum_improvement": 1.9117227383708024,
+  "minimum_improvement": 1.2761230560680799,
+  "model": "llama2-7b",
+  "points": [
+    {
+      "aa_operations": 1073741824,
+      "context": 2048,
+      "energy_efficiency_improvement": 1.2761230560680799,
+      "figlut_energy_mj": 90.9727760384,
+      "figlut_kv_bytes": 1073741824,
+      "omni_energy_mj": 71.28840404992,
+      "omni_kv_bytes": 201326592
+    },
+    {
+      "aa_operations": 2147483648,
+      "context": 4096,
+      "energy_efficiency_improvement": 1.5129177446220365,
+      "figlut_energy_mj": 114.5950961664,
+      "figlut_kv_bytes": 2147483648,
+      "omni_energy_mj": 75.74443261951998,
+      "omni_kv_bytes": 402653184
+    },
+    {
+      "aa_operations": 4294967296,
+      "context": 8192,
+      "energy_efficiency_improvement": 1.9117227383708024,
+      "figlut_energy_mj": 161.8397364224,
+      "figlut_kv_bytes": 4294967296,
+      "omni_energy_mj": 84.65648975872,
+      "omni_kv_bytes": 805306368
+    }
+  ]
+}

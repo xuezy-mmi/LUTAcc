@@ -1,0 +1,181 @@
+{
+  "modules": {
+    "oasis_cluster": {
+      "cell_types": {
+        "$_AND_": 735,
+        "$_MUX_": 45,
+        "$_NOT_": 255,
+        "$_OR_": 315,
+        "$_XOR_": 285
+      },
+      "generic_cells": 1635,
+      "sources": [
+        "rtl/oasis/oasis_cluster.sv"
+      ]
+    },
+    "oasis_compensation_mac": {
+      "cell_types": {
+        "$_AND_": 11488,
+        "$_DFF_P_": 40,
+        "$_MUX_": 80,
+        "$_NOT_": 8,
+        "$_OR_": 4417,
+        "$_XOR_": 9112
+      },
+      "generic_cells": 25145,
+      "sources": [
+        "rtl/oasis/oasis_compensation_mac.sv"
+      ]
+    },
+    "oasis_concat": {
+      "cell_types": {},
+      "generic_cells": 0,
+      "sources": [
+        "rtl/oasis/oasis_concat.sv"
+      ]
+    },
+    "oasis_controller": {
+      "cell_types": {
+        "$_AND_": 9,
+        "$_DFF_P_": 7,
+        "$_MUX_": 22,
+        "$_NOT_": 3,
+        "$_OR_": 12,
+        "$_XOR_": 2
+      },
+      "generic_cells": 55,
+      "sources": [
+        "rtl/oasis/oasis_controller.sv"
+      ]
+    },
+    "oasis_index_counter": {
+      "cell_types": {
+        "$_AND_": 13056,
+        "$_DFF_P_": 1281,
+        "$_MUX_": 20225,
+        "$_NOT_": 256,
+        "$_OR_": 4864,
+        "$_XOR_": 16768
+      },
+      "generic_cells": 56450,
+      "sources": [
+        "rtl/oasis/oasis_index_counter.sv"
+      ]
+    },
+    "oasis_mac_tree": {
+      "cell_types": {
+        "$_AND_": 29079,
+        "$_DFF_P_": 41,
+        "$_MUX_": 81,
+        "$_OR_": 9948,
+        "$_XOR_": 19249
+      },
+      "generic_cells": 58398,
+      "sources": [
+        "rtl/oasis/oasis_mac_tree.sv"
+      ]
+    },
+    "omni_bqu": {
+      "cell_types": {
+        "$_AND_": 84,
+        "$_DFF_P_": 10,
+        "$_MUX_": 108,
+        "$_NOT_": 7,
+        "$_OR_": 45,
+        "$_XOR_": 47
+      },
+      "generic_cells": 301,
+      "sources": [
+        "rtl/omni/omni_bqu.sv"
+      ]
+    },
+    "omni_controller": {
+      "cell_types": {
+        "$_AND_": 8,
+        "$_DFF_P_": 8,
+        "$_MUX_": 26,
+        "$_NOT_": 5,
+        "$_OR_": 13,
+        "$_XOR_": 2
+      },
+      "generic_cells": 62,
+      "sources": [
+        "rtl/omni/omni_controller.sv"
+      ]
+    },
+    "omni_lgu": {
+      "cell_types": {
+        "$_AND_": 1219,
+        "$_DFF_P_": 35,
+        "$_MUX_": 69,
+        "$_NOT_": 1,
+        "$_OR_": 435,
+        "$_XOR_": 946
+      },
+      "generic_cells": 2705,
+      "sources": [
+        "rtl/omni/omni_lgu.sv"
+      ]
+    },
+    "omni_lut_pe": {
+      "cell_types": {
+        "$_AND_": 281,
+        "$_DFF_P_": 592,
+        "$_MUX_": 6076,
+        "$_NOT_": 6,
+        "$_OR_": 83,
+        "$_XOR_": 95
+      },
+      "generic_cells": 7133,
+      "sources": [
+        "rtl/omni/omni_lut_pe.sv"
+      ]
+    },
+    "orizuru_tree": {
+      "cell_types": {
+        "$_AND_": 1365,
+        "$_MUX_": 570,
+        "$_NOT_": 468,
+        "$_OR_": 566,
+        "$_XOR_": 551
+      },
+      "generic_cells": 3520,
+      "sources": [
+        "rtl/oasis/orizuru_tree.sv"
+      ]
+    }
+  },
+  "ppa_claim": "open_generic_gate_proxy_only",
+  "scaled_proxy": {
+    "calibration": {
+      "evidence": "calibrated",
+      "mm2_per_generic_gate": 2.7874594941298934e-07,
+      "technology_nm": 28,
+      "warning": "Generic techmapped gates are not standard-cell P&R area."
+    },
+    "oasis": {
+      "covered_reported_area_mm2": 8.69871,
+      "instances": {
+        "oasis_cluster": 4,
+        "oasis_compensation_mac": 16,
+        "oasis_concat": 65536,
+        "oasis_index_counter": 512,
+        "oasis_mac_tree": 16,
+        "orizuru_tree": 273
+      },
+      "scaled_generic_cells": 31206588
+    },
+    "omni_lut": {
+      "evidence": "predicted_from_oasis_generic_gate_calibration",
+      "instances": {
+        "omni_bqu": 1,
+        "omni_controller": 1,
+        "omni_lgu": 1,
+        "omni_lut_pe": 128
+      },
+      "predicted_logic_area_mm2": 0.25535693428964423,
+      "scaled_generic_cells": 916092
+    }
+  },
+  "tool": "Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)"
+}

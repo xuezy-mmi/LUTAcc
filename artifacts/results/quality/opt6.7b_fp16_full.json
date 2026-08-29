@@ -1,0 +1,30 @@
+{
+  "activation_codebooks": 0,
+  "calibration_dataset": "c4",
+  "calibration_samples": 16,
+  "cuda": "12.1",
+  "evidence": "measured",
+  "gpu_names": [
+    "NVIDIA GeForce RTX 4090"
+  ],
+  "gradient_fisher": false,
+  "mean_weight_rmse": 0.0,
+  "metrics": {
+    "chunks": 139,
+    "elapsed_seconds": 42.047860860824585,
+    "evaluated_tokens": 284533,
+    "perplexity": 10.757435377488125,
+    "sequence_length": 2048,
+    "tokens_per_second": 6766.884073883899
+  },
+  "mode": "fp16",
+  "model": "facebook/opt-6.7b",
+  "outlier_fraction": 0.01,
+  "skip_activation_quantization": false,
+  "skip_weight_quantization": false,
+  "torch": "2.4.1+cu121",
+  "weight_energy_fisher_proxy": false,
+  "weight_quantized_modules": 0,
+  "weight_scale_iterations": 0,
+  "weight_scale_method": "maxabs"
+}

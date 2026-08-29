@@ -1,0 +1,107 @@
+{
+  "paper": {
+    "title": "OASIS: Outlier-Aware LUT-Based GEMM with Dual-Side Quantization for LLM Inference Acceleration",
+    "doi": "10.1109/ISCA66397.2026.00036",
+    "source": "https://arxiv.org/abs/2507.23035v4",
+    "revision": "v4, 2026-06-02"
+  },
+  "hardware": {
+    "evidence": "reported",
+    "technology_nm": 28,
+    "clock_mhz": 500,
+    "area_mm2": 15.31,
+    "power_w": 9.66,
+    "pe_lines": 16,
+    "concat_units_per_line": 4096,
+    "index_counters_per_line": 32,
+    "index_counter_inputs": 16,
+    "compensation_macs_per_line": 8,
+    "reported_sram_area_mm2": 3.8575
+  },
+  "pipeline_1x4096x4096_w4a4_1pct": {
+    "evidence": "reported",
+    "source": "arXiv v4 Fig. cycle_latency",
+    "activation_quantization_cycles": 2048,
+    "concat_cycles": 256,
+    "index_distribution_cycles": 1024,
+    "reduction_cycles": 2304,
+    "outlier_detection_cycles": 1344,
+    "error_compensation_cycles": 1536,
+    "merge_cycles": 256,
+    "critical_total_cycles": 2560
+  },
+  "memory_traffic_percent_1x4096x4096_w4a4_1pct": {
+    "evidence": "reported",
+    "source": "arXiv v4 Fig. mem_energy_breakdown(a)",
+    "weight_index_buffer": 76.0,
+    "lut": 19.2,
+    "activation_index_buffer": 4.8,
+    "output_buffer": 0.1
+  },
+  "energy_percent_1x4096x4096_w4a4_1pct": {
+    "evidence": "reported",
+    "source": "arXiv v4 Fig. mem_energy_breakdown(b)",
+    "activation_quantization": 14.7,
+    "index_distribution": 7.4,
+    "error_compensation": 3.6,
+    "concat": 1.8,
+    "reduction": 33.1,
+    "outlier_detection": 17.4,
+    "merge": 22.1
+  },
+  "single_batch_decode_geomean": {
+    "evidence": "reported",
+    "source": "arXiv v4 Hardware Performance Analysis",
+    "a4_speedup_vs_a100": 5.41,
+    "a4_speedup_vs_quarot": 3.12,
+    "a4_speedup_vs_figlut": 3.00,
+    "a3_speedup_vs_a100": 5.67,
+    "a3_speedup_vs_quarot": 3.27,
+    "a3_speedup_vs_figlut": 3.15,
+    "a4_energy_efficiency_vs_a100": 198.10,
+    "a4_energy_efficiency_vs_quarot": 108.80,
+    "a4_energy_efficiency_vs_figlut": 1.44,
+    "a3_energy_efficiency_vs_a100": 206.53,
+    "a3_energy_efficiency_vs_quarot": 113.56,
+    "a3_energy_efficiency_vs_figlut": 1.51
+  },
+  "other_reported_headlines": {
+    "batched_decode_a4_speedup": 3.41,
+    "batched_decode_a3_speedup": 3.73,
+    "batched_decode_a4_energy_efficiency": 26.43,
+    "batched_decode_a3_energy_efficiency": 28.20,
+    "prefill_decode_a4_speedup_vs_figlut": 2.80,
+    "prefill_decode_a3_speedup_vs_figlut": 2.93,
+    "lookahead_a4_throughput_gain_at_1pct": 1.16,
+    "lookahead_a3_throughput_gain_at_1pct": 1.18,
+    "lut_size_reduction_vs_figlut": 62.1,
+    "reduction_flop_reduction_vs_figlut": 497.1
+  },
+  "wikitext2_ppl_selected": {
+    "evidence": "reported",
+    "sequence_length": 2048,
+    "opt_6p7b": {"fp16": 10.86, "oasis_a4": 11.62, "oasis_a3": 14.12},
+    "llama2_7b": {"fp16": 5.47, "oasis_a4": 5.90, "oasis_a3": 7.49},
+    "llama3_8b": {"fp16": 6.14, "oasis_a4": 7.11, "oasis_a3": 8.18},
+    "mistral_7b": {"fp16": 5.25, "oasis_a4": 5.75, "oasis_a3": 7.27}
+  },
+  "zero_shot_mistral_7b": {
+    "evidence": "reported",
+    "sequence_length": 2048,
+    "fp16": {
+      "piqa": 0.8254, "arc_easy": 0.7942, "arc_challenge": 0.5418,
+      "boolq": 0.7739, "hellaswag": 0.8118, "winogrande": 0.7522,
+      "mean": 0.7499
+    },
+    "oasis_a4": {
+      "piqa": 0.8210, "arc_easy": 0.7782, "arc_challenge": 0.5324,
+      "boolq": 0.7577, "hellaswag": 0.8015, "winogrande": 0.7340,
+      "mean": 0.7380
+    },
+    "oasis_a3": {
+      "piqa": 0.7987, "arc_easy": 0.7630, "arc_challenge": 0.4932,
+      "boolq": 0.7303, "hellaswag": 0.7858, "winogrande": 0.7056,
+      "mean": 0.7128
+    }
+  }
+}

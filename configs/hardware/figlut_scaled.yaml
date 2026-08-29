@@ -1,0 +1,17 @@
+name: figlut-equal-footprint
+evidence: inferred
+source: arxiv:2503.06862 Table hardware comparison and OASIS equal-platform setup
+clock_hz: 500000000
+group_size: 4
+weight_bits: 4
+parallel_outputs: 16
+group_bit_lanes_per_output: 128
+dram_bandwidth_bytes_per_cycle: 3200
+source_engine_power_w: 0.29
+equal_footprint_replicas: 15.31
+power_w: 4.4399
+notes: >-
+  FIGLUT reports 0.14 TOPS and 0.29 W for its FP16-Q4 engine at 28 nm.
+  The comparison proxy scales engines to the 15.31 mm2 OASIS footprint and
+  uses a 128-lane grouped bit-serial issue plane. The resulting peak and power
+  are independently consistent with the reported FIGLUT engine and OASIS area.

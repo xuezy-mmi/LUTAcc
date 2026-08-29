@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "name": "OASIS arXiv v4",
+      "url": "https://arxiv.org/abs/2507.23035v4",
+      "doi": "10.1109/ISCA66397.2026.00036",
+      "access": "public CC BY 4.0",
+      "used_for": ["algorithm", "architecture", "hardware table", "cycle target", "accuracy and performance targets"]
+    },
+    {
+      "name": "Omni-LUT IEEE record",
+      "url": "https://ieeexplore.ieee.org/document/11617798/",
+      "doi": "10.1109/ISCA66397.2026.00037",
+      "access": "public abstract and preview only",
+      "used_for": ["abstract claims", "headline energy-efficiency range"]
+    },
+    {
+      "name": "FIGLUT arXiv",
+      "url": "https://arxiv.org/abs/2503.06862",
+      "access": "public",
+      "used_for": ["grouped bit-serial baseline mechanism", "0.14 TOPS / 0.29 W engine anchor"]
+    },
+    {
+      "name": "NVIDIA A100 80GB SXM datasheet",
+      "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/a100-80gb-datasheet-update-nvidia-us-1521051-r2-web.pdf",
+      "access": "public vendor datasheet",
+      "used_for": ["2.039 TB/s HBM bandwidth roofline bound", "312 TFLOP/s FP16 tensor-core bound", "400 W TDP bound"]
+    },
+    {
+      "name": "QuaRot arXiv",
+      "url": "https://arxiv.org/abs/2404.00456",
+      "access": "public",
+      "used_for": ["W4A4 rotated GPU baseline mechanism"]
+    },
+    {
+      "name": "HPE CACTI",
+      "url": "https://github.com/HewlettPackard/cacti",
+      "commit": "1ffd8dfb10303d306ecd8d215320aea07651e878",
+      "used_for": ["32 nm SRAM area/timing/energy proxy"]
+    },
+    {
+      "name": "DRAMPower",
+      "url": "https://github.com/tukl-msd/DRAMPower",
+      "commit": "8b0dedaf45f9bf528792561f87786aa827db94cc",
+      "used_for": ["LPDDR5 energy-per-byte cross-check"]
+    },
+    {
+      "name": "NousResearch Llama-2-7B base-weight mirror",
+      "url": "https://huggingface.co/NousResearch/Llama-2-7b-hf",
+      "commit": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+      "used_for": ["ungated real-model WikiText-2 evaluation asset"]
+    },
+    {
+      "name": "NousResearch Meta-Llama-3-8B base-weight mirror",
+      "url": "https://huggingface.co/NousResearch/Meta-Llama-3-8B",
+      "commit": "315b20096dc791d381d514deb5f8bd9c8d6d3061",
+      "used_for": ["ungated real-model WikiText-2 evaluation asset"]
+    },
+    {
+      "name": "local Chipyard",
+      "commit": "b5d013190d637e634113cb5179f8c8885df1945a",
+      "used_for": ["LazyRoCC", "BlackBox resource", "Verilator integration pattern"]
+    },
+    {
+      "name": "cspool/MLX_dev",
+      "commit": "21b359d06c4196808a5a2dc40a692478dce99a25",
+      "url": "https://github.com/cspool/MLX_dev",
+      "used_for": ["evidence separation and completion-audit organization only"],
+      "code_copied": false
+    }
+  ]
+}

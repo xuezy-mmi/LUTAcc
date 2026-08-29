@@ -1,0 +1,44 @@
+{
+  "activation_codebooks": 192,
+  "calibration_dataset": "c4",
+  "calibration_file": "/data3/docker_cache/LUTAcc/calibration/c4_validation_16.json",
+  "calibration_file_sha256": "b2e620a01e1c5214998562ac7d9ba792a1619e0bbe73cb046a7895fe2eb034af",
+  "calibration_samples": 16,
+  "cuda": "12.1",
+  "evidence": "measured",
+  "force_zero_weight_centroid": false,
+  "gpu_names": [
+    "NVIDIA GeForce RTX 4090"
+  ],
+  "gradient_fisher": false,
+  "mean_weight_rmse": 0.0016943214368779994,
+  "metrics": {
+    "chunks": 139,
+    "elapsed_seconds": 81.18432712554932,
+    "evaluated_tokens": 284533,
+    "perplexity": 13.282446418247785,
+    "sequence_length": 2048,
+    "tokens_per_second": 3504.777462280097
+  },
+  "mode": "oasis-a3",
+  "model": "facebook/opt-6.7b",
+  "outlier_fraction": 0.01,
+  "peak_gpu_memory_bytes": 14731076096,
+  "skip_activation_quantization": false,
+  "skip_weight_quantization": false,
+  "timing": {
+    "activation_calibration_seconds": 44.22184729576111,
+    "evaluation_seconds": 81.18432712554932,
+    "model_load_seconds": 4.851847171783447,
+    "total_seconds": 135.52793288230896,
+    "weight_hessian_calibration_seconds": 0.0,
+    "weight_quantization_seconds": 3.9099411964416504
+  },
+  "torch": "2.4.1+cu121",
+  "weight_energy_fisher_proxy": true,
+  "weight_input_hessian": false,
+  "weight_quantized_modules": 192,
+  "weight_quantizer": "kmeans",
+  "weight_scale_iterations": 0,
+  "weight_scale_method": "maxabs"
+}

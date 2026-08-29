@@ -1,0 +1,64 @@
+{
+  "accuracies": {
+    "arc_challenge": 0.5392491467576792,
+    "arc_easy": 0.7954545454545454,
+    "boolq": 0.8370030581039756,
+    "hellaswag": 0.8105954989046007,
+    "piqa": 0.8210010881392819,
+    "winogrande": 0.7387529597474349
+  },
+  "activation_codebooks": 0,
+  "calibration_dataset": "c4",
+  "calibration_file": null,
+  "calibration_file_sha256": null,
+  "calibration_samples": 16,
+  "elapsed_seconds": 632.5397534370422,
+  "evidence": "measured",
+  "gradient_fisher": false,
+  "limit": null,
+  "mean_accuracy": 0.757009382851253,
+  "mode": "fp16",
+  "model": "mistralai/Mistral-7B-v0.1",
+  "tasks": {
+    "arc_challenge": {
+      "acc,none": 0.5042662116040956,
+      "acc_norm,none": 0.5392491467576792,
+      "acc_norm_stderr,none": 0.014566303676636584,
+      "acc_stderr,none": 0.014610858923956945,
+      "alias": "arc_challenge"
+    },
+    "arc_easy": {
+      "acc,none": 0.8089225589225589,
+      "acc_norm,none": 0.7954545454545454,
+      "acc_norm_stderr,none": 0.008276958800003,
+      "acc_stderr,none": 0.008067265958015954,
+      "alias": "arc_easy"
+    },
+    "boolq": {
+      "acc,none": 0.8370030581039756,
+      "acc_stderr,none": 0.006460197424088754,
+      "alias": "boolq"
+    },
+    "hellaswag": {
+      "acc,none": 0.6121290579565823,
+      "acc_norm,none": 0.8105954989046007,
+      "acc_norm_stderr,none": 0.003910288117015101,
+      "acc_stderr,none": 0.004862690594815694,
+      "alias": "hellaswag"
+    },
+    "piqa": {
+      "acc,none": 0.8063112078346029,
+      "acc_norm,none": 0.8210010881392819,
+      "acc_norm_stderr,none": 0.008944220220204939,
+      "acc_stderr,none": 0.009220384152336643,
+      "alias": "piqa"
+    },
+    "winogrande": {
+      "acc,none": 0.7387529597474349,
+      "acc_stderr,none": 0.012346914863415312,
+      "alias": "winogrande"
+    }
+  },
+  "weight_energy_fisher_proxy": false,
+  "weight_quantized_modules": 0
+}

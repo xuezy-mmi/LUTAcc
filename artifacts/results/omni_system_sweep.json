@@ -1,0 +1,516 @@
+{
+  "decode": {
+    "128": {
+      "batch": 1,
+      "cycles": 26132192,
+      "dram_bytes": 3242835968,
+      "energy_mj": 131.99083760000002,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 128,
+      "latency_ms": 52.264384,
+      "layer_breakdown": [
+        {
+          "cycles": 203776,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.0902016,
+          "operation": "qkv",
+          "workload": "gemm-1x4096x12288-b1"
+        },
+        {
+          "cycles": 3595,
+          "design": "omni-lut",
+          "energy_mj": 0.010874875,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-decode-q1-kv128-d128-b1-h32"
+        },
+        {
+          "cycles": 68608,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.3670528,
+          "operation": "o_proj",
+          "workload": "gemm-1x4096x4096-b1"
+        },
+        {
+          "cycles": 364288,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.9489408000000001,
+          "operation": "gate_up",
+          "workload": "gemm-1x4096x22016-b1"
+        },
+        {
+          "cycles": 176364,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.7076435999999999,
+          "operation": "down",
+          "workload": "gemm-1x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 13019774976,
+      "phase": "decode",
+      "query_length": 1,
+      "tokens_per_second": 19.133488687056946
+    },
+    "16384": {
+      "batch": 1,
+      "cycles": 38604928,
+      "dram_bytes": 4853448704,
+      "energy_mj": 152.302336,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 16384,
+      "latency_ms": 77.20985599999999,
+      "layer_breakdown": [
+        {
+          "cycles": 203776,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.0902016,
+          "operation": "qkv",
+          "workload": "gemm-1x4096x12288-b1"
+        },
+        {
+          "cycles": 393368,
+          "design": "omni-lut",
+          "energy_mj": 0.6456092,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-decode-q1-kv16384-d128-b1-h32"
+        },
+        {
+          "cycles": 68608,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.3670528,
+          "operation": "o_proj",
+          "workload": "gemm-1x4096x4096-b1"
+        },
+        {
+          "cycles": 364288,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.9489408000000001,
+          "operation": "gate_up",
+          "workload": "gemm-1x4096x22016-b1"
+        },
+        {
+          "cycles": 176364,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.7076435999999999,
+          "operation": "down",
+          "workload": "gemm-1x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 21625831424,
+      "phase": "decode",
+      "query_length": 1,
+      "tokens_per_second": 12.951714351079739
+    },
+    "2048": {
+      "batch": 1,
+      "cycles": 27594880,
+      "dram_bytes": 3444162560,
+      "energy_mj": 134.3824888,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 2048,
+      "latency_ms": 55.18976,
+      "layer_breakdown": [
+        {
+          "cycles": 203776,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.0902016,
+          "operation": "qkv",
+          "workload": "gemm-1x4096x12288-b1"
+        },
+        {
+          "cycles": 49304,
+          "design": "omni-lut",
+          "energy_mj": 0.08561397500000001,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-decode-q1-kv2048-d128-b1-h32"
+        },
+        {
+          "cycles": 68608,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.3670528,
+          "operation": "o_proj",
+          "workload": "gemm-1x4096x4096-b1"
+        },
+        {
+          "cycles": 364288,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.9489408000000001,
+          "operation": "gate_up",
+          "workload": "gemm-1x4096x22016-b1"
+        },
+        {
+          "cycles": 176364,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.7076435999999999,
+          "operation": "down",
+          "workload": "gemm-1x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 14036238336,
+      "phase": "decode",
+      "query_length": 1,
+      "tokens_per_second": 18.119303291045295
+    },
+    "512": {
+      "batch": 1,
+      "cycles": 26249824,
+      "dram_bytes": 3242835968,
+      "energy_mj": 132.3466744,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 512,
+      "latency_ms": 52.499648,
+      "layer_breakdown": [
+        {
+          "cycles": 203776,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.0902016,
+          "operation": "qkv",
+          "workload": "gemm-1x4096x12288-b1"
+        },
+        {
+          "cycles": 7271,
+          "design": "omni-lut",
+          "energy_mj": 0.021994775,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-decode-q1-kv512-d128-b1-h32"
+        },
+        {
+          "cycles": 68608,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.3670528,
+          "operation": "o_proj",
+          "workload": "gemm-1x4096x4096-b1"
+        },
+        {
+          "cycles": 364288,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.9489408000000001,
+          "operation": "gate_up",
+          "workload": "gemm-1x4096x22016-b1"
+        },
+        {
+          "cycles": 176364,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.7076435999999999,
+          "operation": "down",
+          "workload": "gemm-1x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 13223067648,
+      "phase": "decode",
+      "query_length": 1,
+      "tokens_per_second": 19.047746758225884
+    },
+    "8192": {
+      "batch": 1,
+      "cycles": 32313472,
+      "dram_bytes": 4048142336,
+      "energy_mj": 142.0624552,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 8192,
+      "latency_ms": 64.62694400000001,
+      "layer_breakdown": [
+        {
+          "cycles": 203776,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.0902016,
+          "operation": "qkv",
+          "workload": "gemm-1x4096x12288-b1"
+        },
+        {
+          "cycles": 196760,
+          "design": "omni-lut",
+          "energy_mj": 0.32561292499999994,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-decode-q1-kv8192-d128-b1-h32"
+        },
+        {
+          "cycles": 68608,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.3670528,
+          "operation": "o_proj",
+          "workload": "gemm-1x4096x4096-b1"
+        },
+        {
+          "cycles": 364288,
+          "design": "omni-lut-aw",
+          "energy_mj": 1.9489408000000001,
+          "operation": "gate_up",
+          "workload": "gemm-1x4096x22016-b1"
+        },
+        {
+          "cycles": 176364,
+          "design": "omni-lut-aw",
+          "energy_mj": 0.7076435999999999,
+          "operation": "down",
+          "workload": "gemm-1x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 17288921088,
+      "phase": "decode",
+      "query_length": 1,
+      "tokens_per_second": 15.473422354614199
+    }
+  },
+  "prefill": {
+    "128": {
+      "batch": 1,
+      "cycles": 1694875648,
+      "dram_bytes": 3869245440,
+      "energy_mj": 9054.1379584,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 128,
+      "latency_ms": 3389.751296,
+      "layer_breakdown": [
+        {
+          "cycles": 13131776,
+          "design": "omni-lut-aw",
+          "energy_mj": 70.2550016,
+          "operation": "qkv",
+          "workload": "gemm-128x4096x12288-b1"
+        },
+        {
+          "cycles": 180736,
+          "design": "omni-lut",
+          "energy_mj": 0.5467264000000001,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-prefill-q128-kv128-d128-b1-h32"
+        },
+        {
+          "cycles": 4464640,
+          "design": "omni-lut-aw",
+          "energy_mj": 23.885824000000003,
+          "operation": "o_proj",
+          "workload": "gemm-128x4096x4096-b1"
+        },
+        {
+          "cycles": 23424000,
+          "design": "omni-lut-aw",
+          "energy_mj": 125.31840000000003,
+          "operation": "gate_up",
+          "workload": "gemm-128x4096x22016-b1"
+        },
+        {
+          "cycles": 11763712,
+          "design": "omni-lut-aw",
+          "energy_mj": 62.935859199999996,
+          "operation": "down",
+          "workload": "gemm-128x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 1666531196928,
+      "phase": "prefill",
+      "query_length": 128,
+      "tokens_per_second": 37.760882384216075
+    },
+    "16384": {
+      "batch": 1,
+      "cycles": 9209053184,
+      "dram_bytes": 8883535872,
+      "energy_mj": 43565.94237440001,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 16384,
+      "latency_ms": 18418.106368,
+      "layer_breakdown": [
+        {
+          "cycles": 52527104,
+          "design": "omni-lut-aw",
+          "energy_mj": 281.0200064,
+          "operation": "qkv",
+          "workload": "gemm-512x4096x12288-b1"
+        },
+        {
+          "cycles": 76646400,
+          "design": "omni-lut",
+          "energy_mj": 231.85536000000005,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-prefill-q512-kv16384-d128-b1-h32"
+        },
+        {
+          "cycles": 17858560,
+          "design": "omni-lut-aw",
+          "energy_mj": 95.54329600000001,
+          "operation": "o_proj",
+          "workload": "gemm-512x4096x4096-b1"
+        },
+        {
+          "cycles": 93696000,
+          "design": "omni-lut-aw",
+          "energy_mj": 501.2736000000001,
+          "operation": "gate_up",
+          "workload": "gemm-512x4096x22016-b1"
+        },
+        {
+          "cycles": 47054848,
+          "design": "omni-lut-aw",
+          "energy_mj": 251.74343679999998,
+          "operation": "down",
+          "workload": "gemm-512x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 11072425689088,
+      "phase": "prefill",
+      "query_length": 512,
+      "tokens_per_second": 27.79873184409226
+    },
+    "2048": {
+      "batch": 1,
+      "cycles": 7065763840,
+      "dram_bytes": 6064963584,
+      "energy_mj": 37082.492108800005,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 2048,
+      "latency_ms": 14131.52768,
+      "layer_breakdown": [
+        {
+          "cycles": 52527104,
+          "design": "omni-lut-aw",
+          "energy_mj": 281.0200064,
+          "operation": "qkv",
+          "workload": "gemm-512x4096x12288-b1"
+        },
+        {
+          "cycles": 9668608,
+          "design": "omni-lut",
+          "energy_mj": 29.247539200000002,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-prefill-q512-kv2048-d128-b1-h32"
+        },
+        {
+          "cycles": 17858560,
+          "design": "omni-lut-aw",
+          "energy_mj": 95.54329600000001,
+          "operation": "o_proj",
+          "workload": "gemm-512x4096x4096-b1"
+        },
+        {
+          "cycles": 93696000,
+          "design": "omni-lut-aw",
+          "energy_mj": 501.2736000000001,
+          "operation": "gate_up",
+          "workload": "gemm-512x4096x22016-b1"
+        },
+        {
+          "cycles": 47054848,
+          "design": "omni-lut-aw",
+          "energy_mj": 251.74343679999998,
+          "operation": "down",
+          "workload": "gemm-512x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 7186554028032,
+      "phase": "prefill",
+      "query_length": 512,
+      "tokens_per_second": 36.2310439178222
+    },
+    "512": {
+      "batch": 1,
+      "cycles": 6836125696,
+      "dram_bytes": 5762973696,
+      "energy_mj": 36387.8367232,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 512,
+      "latency_ms": 13672.251392,
+      "layer_breakdown": [
+        {
+          "cycles": 52527104,
+          "design": "omni-lut-aw",
+          "energy_mj": 281.0200064,
+          "operation": "qkv",
+          "workload": "gemm-512x4096x12288-b1"
+        },
+        {
+          "cycles": 2492416,
+          "design": "omni-lut",
+          "energy_mj": 7.539558400000001,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-prefill-q512-kv512-d128-b1-h32"
+        },
+        {
+          "cycles": 17858560,
+          "design": "omni-lut-aw",
+          "energy_mj": 95.54329600000001,
+          "operation": "o_proj",
+          "workload": "gemm-512x4096x4096-b1"
+        },
+        {
+          "cycles": 93696000,
+          "design": "omni-lut-aw",
+          "energy_mj": 501.2736000000001,
+          "operation": "gate_up",
+          "workload": "gemm-512x4096x22016-b1"
+        },
+        {
+          "cycles": 47054848,
+          "design": "omni-lut-aw",
+          "energy_mj": 251.74343679999998,
+          "operation": "down",
+          "workload": "gemm-512x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 6770210635776,
+      "phase": "prefill",
+      "query_length": 512,
+      "tokens_per_second": 37.44811189615669
+    },
+    "8192": {
+      "batch": 1,
+      "cycles": 7984316416,
+      "dram_bytes": 7272923136,
+      "energy_mj": 39861.1136512,
+      "evidence": "predicted_from_inferred_configuration",
+      "kv_length": 8192,
+      "latency_ms": 15968.632832000001,
+      "layer_breakdown": [
+        {
+          "cycles": 52527104,
+          "design": "omni-lut-aw",
+          "energy_mj": 281.0200064,
+          "operation": "qkv",
+          "workload": "gemm-512x4096x12288-b1"
+        },
+        {
+          "cycles": 38373376,
+          "design": "omni-lut",
+          "energy_mj": 116.07946240000003,
+          "operation": "attention_qk_softmax_pv",
+          "workload": "attention-prefill-q512-kv8192-d128-b1-h32"
+        },
+        {
+          "cycles": 17858560,
+          "design": "omni-lut-aw",
+          "energy_mj": 95.54329600000001,
+          "operation": "o_proj",
+          "workload": "gemm-512x4096x4096-b1"
+        },
+        {
+          "cycles": 93696000,
+          "design": "omni-lut-aw",
+          "energy_mj": 501.2736000000001,
+          "operation": "gate_up",
+          "workload": "gemm-512x4096x22016-b1"
+        },
+        {
+          "cycles": 47054848,
+          "design": "omni-lut-aw",
+          "energy_mj": 251.74343679999998,
+          "operation": "down",
+          "workload": "gemm-512x11008x4096-b1"
+        }
+      ],
+      "model": "llama2-7b",
+      "operations": 8851927597056,
+      "phase": "prefill",
+      "query_length": 512,
+      "tokens_per_second": 32.06285756498756
+    }
+  }
+}

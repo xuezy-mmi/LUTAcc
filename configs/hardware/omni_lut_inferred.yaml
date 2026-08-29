@@ -1,0 +1,20 @@
+name: omni-lut-open-inferred
+evidence: inferred
+evidence_note: >-
+  Array dimensions and named dataflows come from the supplied paper brief;
+  undisclosed clock, SRAM ports, and PE issue rate are open-surrogate defaults.
+technology_nm: 28
+clock_hz: 500000000
+array_rows: 32
+array_cols: 4
+lut_pes: 128
+lut_group_size: 4
+lookups_per_pe_cycle: 4
+bqu_values_per_cycle: 128
+lgu_entries_per_cycle: 64
+softmax_values_per_cycle: 32
+kv_sram_bytes: 2097152
+lut_sram_bytes: 262144
+dram_bandwidth_bytes_per_cycle: 128
+idle_power_w: 0.35
+active_power_w: 5.0

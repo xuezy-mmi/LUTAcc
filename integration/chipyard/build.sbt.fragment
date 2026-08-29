@@ -1,0 +1,7 @@
+// Add near the other generator projects.
+lazy val lutacc = (project in file("generators/lutacc"))
+  .dependsOn(rocketchip)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(commonSettings)
+
+// Add `lutacc` to the existing chipyard project's .dependsOn(...) list.

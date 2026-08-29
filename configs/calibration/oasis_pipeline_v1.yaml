@@ -1,0 +1,13 @@
+name: oasis-pipeline-v1
+evidence: calibrated
+training_anchor: oasis-arxiv-v4-fig-cycle-latency-1x4096x4096-w4a4-1pct
+activation_values_per_cycle: 2
+index_values_per_wave_cycle: 1024
+reduction_pipeline_overhead_cycles: 1
+orizuru_local_init_cycles: 3
+orizuru_global_fill_per_level: 8
+dequant_pipeline_overhead_cycles: 1
+merge_values_per_line_cycle: 1
+validation_policy: >-
+  The exact anchor is calibration-only. Shape, precision, batch, and outlier
+  sweeps are validation/prediction points and retain their own provenance.

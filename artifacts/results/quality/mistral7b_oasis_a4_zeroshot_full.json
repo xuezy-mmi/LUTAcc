@@ -1,0 +1,64 @@
+{
+  "accuracies": {
+    "arc_challenge": 0.5008532423208191,
+    "arc_easy": 0.7811447811447811,
+    "boolq": 0.7972477064220184,
+    "hellaswag": 0.785202150965943,
+    "piqa": 0.8144722524483133,
+    "winogrande": 0.7111286503551697
+  },
+  "activation_codebooks": 224,
+  "calibration_dataset": "c4",
+  "calibration_file": "/data3/docker_cache/LUTAcc/calibration/c4_validation_16.json",
+  "calibration_file_sha256": "b2e620a01e1c5214998562ac7d9ba792a1619e0bbe73cb046a7895fe2eb034af",
+  "calibration_samples": 16,
+  "elapsed_seconds": 1162.5477080345154,
+  "evidence": "measured",
+  "gradient_fisher": false,
+  "limit": null,
+  "mean_accuracy": 0.7316747972761742,
+  "mode": "oasis-a4",
+  "model": "mistralai/Mistral-7B-v0.1",
+  "tasks": {
+    "arc_challenge": {
+      "acc,none": 0.4616040955631399,
+      "acc_norm,none": 0.5008532423208191,
+      "acc_norm_stderr,none": 0.014611369529813265,
+      "acc_stderr,none": 0.014568245550296354,
+      "alias": "arc_challenge"
+    },
+    "arc_easy": {
+      "acc,none": 0.7803030303030303,
+      "acc_norm,none": 0.7811447811447811,
+      "acc_norm_stderr,none": 0.008484229631251972,
+      "acc_stderr,none": 0.008495948537928774,
+      "alias": "arc_easy"
+    },
+    "boolq": {
+      "acc,none": 0.7972477064220184,
+      "acc_stderr,none": 0.007031889974008513,
+      "alias": "boolq"
+    },
+    "hellaswag": {
+      "acc,none": 0.5877315275841466,
+      "acc_norm,none": 0.785202150965943,
+      "acc_norm_stderr,none": 0.0040984271589491654,
+      "acc_stderr,none": 0.004912370023912994,
+      "alias": "hellaswag"
+    },
+    "piqa": {
+      "acc,none": 0.79379760609358,
+      "acc_norm,none": 0.8144722524483133,
+      "acc_norm_stderr,none": 0.009069597302603993,
+      "acc_stderr,none": 0.009439460331609507,
+      "alias": "piqa"
+    },
+    "winogrande": {
+      "acc,none": 0.7111286503551697,
+      "acc_stderr,none": 0.012738241271018446,
+      "alias": "winogrande"
+    }
+  },
+  "weight_energy_fisher_proxy": true,
+  "weight_quantized_modules": 224
+}

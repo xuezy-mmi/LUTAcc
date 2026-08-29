@@ -1,0 +1,74 @@
+{
+  "accuracies": {
+    "arc_challenge": 0.4761092150170648,
+    "arc_easy": 0.7592592592592593,
+    "boolq": 0.781651376146789,
+    "hellaswag": 0.7701653057159928,
+    "piqa": 0.7992383025027203,
+    "winogrande": 0.6779794790844514
+  },
+  "activation_codebooks": 224,
+  "calibration_dataset": "c4",
+  "calibration_file": "/data3/docker_cache/LUTAcc/calibration/c4_validation_16.json",
+  "calibration_file_sha256": "b2e620a01e1c5214998562ac7d9ba792a1619e0bbe73cb046a7895fe2eb034af",
+  "calibration_samples": 16,
+  "elapsed_seconds": 1196.329180240631,
+  "evidence": "measured",
+  "force_zero_weight_centroid": true,
+  "gpu_names": [
+    "NVIDIA GeForce RTX 4090"
+  ],
+  "gradient_fisher": false,
+  "limit": null,
+  "lm_eval_version": "0.4.5",
+  "maximum_activation_working_set_elements": 4194304,
+  "mean_accuracy": 0.7107338229543797,
+  "mode": "oasis-a3",
+  "model": "mistralai/Mistral-7B-v0.1",
+  "outlier_fraction": 0.01,
+  "sequence_length": 2048,
+  "tasks": {
+    "arc_challenge": {
+      "acc,none": 0.45051194539249145,
+      "acc_norm,none": 0.4761092150170648,
+      "acc_norm_stderr,none": 0.014594701798071655,
+      "acc_stderr,none": 0.014539646098471627,
+      "alias": "arc_challenge"
+    },
+    "arc_easy": {
+      "acc,none": 0.7609427609427609,
+      "acc_norm,none": 0.7592592592592593,
+      "acc_norm_stderr,none": 0.008772796145221903,
+      "acc_stderr,none": 0.008751754723580418,
+      "alias": "arc_easy"
+    },
+    "boolq": {
+      "acc,none": 0.781651376146789,
+      "acc_stderr,none": 0.00722560668450744,
+      "alias": "boolq"
+    },
+    "hellaswag": {
+      "acc,none": 0.5746863174666401,
+      "acc_norm,none": 0.7701653057159928,
+      "acc_norm_stderr,none": 0.0041986655866639066,
+      "acc_stderr,none": 0.00493380092756053,
+      "alias": "hellaswag"
+    },
+    "piqa": {
+      "acc,none": 0.7856365614798694,
+      "acc_norm,none": 0.7992383025027203,
+      "acc_norm_stderr,none": 0.009345961674823407,
+      "acc_stderr,none": 0.00957484213605095,
+      "alias": "piqa"
+    },
+    "winogrande": {
+      "acc,none": 0.6779794790844514,
+      "acc_stderr,none": 0.013132070202071081,
+      "alias": "winogrande"
+    }
+  },
+  "torch_version": "2.4.1+cu121",
+  "weight_energy_fisher_proxy": true,
+  "weight_quantized_modules": 224,
+  "weight_quantizer": "kmeans"
+}

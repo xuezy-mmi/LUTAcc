@@ -1,0 +1,6 @@
+{
+  "numpy": "1.24.4",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.27",
+  "python": "3.8.0",
+  "verilator": "Verilator 4.034 2020-05-03 rev v4.034"
+}

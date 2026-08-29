@@ -1,0 +1,18 @@
+{
+  "evidence": {
+    "oasis_cycle": "calibrated_then_measured",
+    "oasis_system": "predicted_vs_inferred_baseline",
+    "omni": "predicted_from_inferred_28nm_coefficients"
+  },
+  "oasis_a3_energy_efficiency_vs_figlut": 1.4388008946939719,
+  "oasis_a3_speedup_vs_figlut": 3.130434614010174,
+  "oasis_a4_energy_efficiency_vs_figlut": 1.4388008946939719,
+  "oasis_a4_speedup_vs_figlut": 3.130434614010174,
+  "oasis_anchor_cycles": 2560,
+  "oasis_functional_max_error": 3.814697265625e-05,
+  "omni_capacity_reduction": 2.8287292817679557,
+  "omni_compensation_improves_rmse": true,
+  "omni_energy_efficiency_max": 1.9117227383708024,
+  "omni_energy_efficiency_min": 1.2761230560680799,
+  "omni_headline_numeric_validation_available": true
+}

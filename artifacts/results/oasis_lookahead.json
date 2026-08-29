@@ -1,0 +1,246 @@
+{
+  "a3": {
+    "activation_bits": 3,
+    "comparison_evidence": "predicted_mechanism_ablation",
+    "conventional_dynamic_detection": {
+      "batch": 1,
+      "cycles_per_token": 1123392,
+      "design": "oasis-c-a3",
+      "dram_bytes_per_token": 3242213376,
+      "energy_per_token_mj": 21.70393344,
+      "evidence": "predicted",
+      "latency_ms": 2.246784,
+      "layer_breakdown": [
+        {
+          "cycles": 7875,
+          "energy_mj": 0.9415230184727272,
+          "operation": "qkv",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 12288
+          }
+        },
+        {
+          "cycles": 3648,
+          "energy_mj": 0.32459820206247086,
+          "operation": "o_proj",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 4096
+          }
+        },
+        {
+          "cycles": 14107,
+          "energy_mj": 1.6741212379599066,
+          "operation": "gate_up",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 22016
+          }
+        },
+        {
+          "cycles": 9476,
+          "energy_mj": 0.8389721442802531,
+          "operation": "down",
+          "shape": {
+            "batch": 1,
+            "k": 11008,
+            "m": 1,
+            "n": 4096
+          }
+        }
+      ],
+      "model": "llama2-7b",
+      "operations_per_token": 12952010752,
+      "tokens_per_second": 445.08061300062667
+    },
+    "lookahead": {
+      "batch": 1,
+      "cycles_per_token": 1013248,
+      "design": "oasis-a3",
+      "dram_bytes_per_token": 3242213376,
+      "energy_per_token_mj": 19.57595136,
+      "evidence": "predicted",
+      "latency_ms": 2.026496,
+      "layer_breakdown": [
+        {
+          "cycles": 7875,
+          "energy_mj": 0.9415230184727272,
+          "operation": "qkv",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 12288
+          }
+        },
+        {
+          "cycles": 2627,
+          "energy_mj": 0.32459820206247086,
+          "operation": "o_proj",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 4096
+          }
+        },
+        {
+          "cycles": 14107,
+          "energy_mj": 1.6741212379599066,
+          "operation": "gate_up",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 22016
+          }
+        },
+        {
+          "cycles": 7055,
+          "energy_mj": 0.8389721442802531,
+          "operation": "down",
+          "shape": {
+            "batch": 1,
+            "k": 11008,
+            "m": 1,
+            "n": 4096
+          }
+        }
+      ],
+      "model": "llama2-7b",
+      "operations_per_token": 12952010752,
+      "tokens_per_second": 493.46260737746337
+    },
+    "model": "llama2-7b",
+    "throughput_improvement": 1.1087038908539666
+  },
+  "a4": {
+    "activation_bits": 4,
+    "comparison_evidence": "predicted_mechanism_ablation",
+    "conventional_dynamic_detection": {
+      "batch": 1,
+      "cycles_per_token": 1200256,
+      "design": "oasis-c-a4",
+      "dram_bytes_per_token": 3242213376,
+      "energy_per_token_mj": 23.188945920000002,
+      "evidence": "predicted",
+      "latency_ms": 2.400512,
+      "layer_breakdown": [
+        {
+          "cycles": 9024,
+          "energy_mj": 0.9633292058853147,
+          "operation": "qkv",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 12288
+          }
+        },
+        {
+          "cycles": 3904,
+          "energy_mj": 0.3318669312,
+          "operation": "o_proj",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 4096
+          }
+        },
+        {
+          "cycles": 15104,
+          "energy_mj": 1.7131906570741258,
+          "operation": "gate_up",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 22016
+          }
+        },
+        {
+          "cycles": 9476,
+          "energy_mj": 0.8462408734177822,
+          "operation": "down",
+          "shape": {
+            "batch": 1,
+            "k": 11008,
+            "m": 1,
+            "n": 4096
+          }
+        }
+      ],
+      "model": "llama2-7b",
+      "operations_per_token": 12952010752,
+      "tokens_per_second": 416.57779673669614
+    },
+    "lookahead": {
+      "batch": 1,
+      "cycles_per_token": 1013248,
+      "design": "oasis-a4",
+      "dram_bytes_per_token": 3242213376,
+      "energy_per_token_mj": 19.57595136,
+      "evidence": "predicted",
+      "latency_ms": 2.026496,
+      "layer_breakdown": [
+        {
+          "cycles": 7875,
+          "energy_mj": 0.9633292058853147,
+          "operation": "qkv",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 12288
+          }
+        },
+        {
+          "cycles": 2627,
+          "energy_mj": 0.3318669312,
+          "operation": "o_proj",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 4096
+          }
+        },
+        {
+          "cycles": 14107,
+          "energy_mj": 1.7131906570741258,
+          "operation": "gate_up",
+          "shape": {
+            "batch": 1,
+            "k": 4096,
+            "m": 1,
+            "n": 22016
+          }
+        },
+        {
+          "cycles": 7055,
+          "energy_mj": 0.8462408734177822,
+          "operation": "down",
+          "shape": {
+            "batch": 1,
+            "k": 11008,
+            "m": 1,
+            "n": 4096
+          }
+        }
+      ],
+      "model": "llama2-7b",
+      "operations_per_token": 12952010752,
+      "tokens_per_second": 493.46260737746337
+    },
+    "model": "llama2-7b",
+    "throughput_improvement": 1.1845629105608895
+  }
+}

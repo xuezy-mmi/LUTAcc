@@ -1,0 +1,394 @@
+{
+  "available_checks_pass": true,
+  "checks": [
+    {
+      "evidence": "measured_full_token_quality_audit",
+      "name": "oasis.full_ppl.opt_mistral",
+      "pass": true
+    },
+    {
+      "evidence": "measured_full_lm_eval_quality_audit",
+      "name": "oasis.full_zero_shot.mistral",
+      "pass": true
+    },
+    {
+      "evidence": "measured_serialized_ir_round_trip",
+      "name": "compiler.serialized_ir_cycle_contract",
+      "pass": true
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 2048.0,
+      "name": "oasis.pipeline.activation_quantization",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 2048.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 256.0,
+      "name": "oasis.pipeline.concat",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 256.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 1024.0,
+      "name": "oasis.pipeline.index_distribution",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 1024.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 2304.0,
+      "name": "oasis.pipeline.reduction",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 2304.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 1344.0,
+      "name": "oasis.pipeline.outlier_detection",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 1344.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 1536.0,
+      "name": "oasis.pipeline.error_compensation",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 1536.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 256.0,
+      "name": "oasis.pipeline.merge",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 256.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_from_calibrated_cycle_model",
+      "measured": 2560.0,
+      "name": "oasis.pipeline.total",
+      "pass": true,
+      "relative_error": 0.0,
+      "target": 2560.0,
+      "tolerance": 0.1
+    },
+    {
+      "absolute_error": 0.13382899628253142,
+      "evidence": "measured",
+      "measured": 76.13382899628253,
+      "name": "oasis.sram_traffic.weight_index_buffer",
+      "pass": true,
+      "target": 76.0,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.16654275092936643,
+      "evidence": "measured",
+      "measured": 19.033457249070633,
+      "name": "oasis.sram_traffic.lut",
+      "pass": true,
+      "target": 19.2,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.04163568773234161,
+      "evidence": "measured",
+      "measured": 4.758364312267658,
+      "name": "oasis.sram_traffic.activation_index_buffer",
+      "pass": true,
+      "target": 4.8,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.025650557620817846,
+      "evidence": "measured",
+      "measured": 0.07434944237918216,
+      "name": "oasis.sram_traffic.output_buffer",
+      "pass": true,
+      "target": 0.1,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.01468531468531431,
+      "evidence": "measured",
+      "measured": 14.685314685314685,
+      "name": "oasis.stage_energy.activation_quantization",
+      "pass": true,
+      "target": 14.7,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.00739260739260672,
+      "evidence": "measured",
+      "measured": 7.392607392607394,
+      "name": "oasis.stage_energy.index_distribution",
+      "pass": true,
+      "target": 7.4,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.0035964035964033414,
+      "evidence": "measured",
+      "measured": 3.5964035964035967,
+      "name": "oasis.stage_energy.error_compensation",
+      "pass": true,
+      "target": 3.6,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.0017982017982016707,
+      "evidence": "measured",
+      "measured": 1.7982017982017984,
+      "name": "oasis.stage_energy.concat",
+      "pass": true,
+      "target": 1.8,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.03306693306693376,
+      "evidence": "measured",
+      "measured": 33.06693306693307,
+      "name": "oasis.stage_energy.reduction",
+      "pass": true,
+      "target": 33.1,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.017382617382615706,
+      "evidence": "measured",
+      "measured": 17.382617382617383,
+      "name": "oasis.stage_energy.outlier_detection",
+      "pass": true,
+      "target": 17.4,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "absolute_error": 0.022077922077922807,
+      "evidence": "measured",
+      "measured": 22.07792207792208,
+      "name": "oasis.stage_energy.merge",
+      "pass": true,
+      "target": 22.1,
+      "tolerance": 0.25,
+      "unit": "percentage_point"
+    },
+    {
+      "evidence": "predicted_vs_inferred_figlut",
+      "measured": 3.130434614010174,
+      "name": "oasis.a4.speedup_vs_figlut",
+      "pass": true,
+      "relative_error": 0.043478204670057995,
+      "target": 3.0,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_inferred_figlut",
+      "measured": 1.4388008946939719,
+      "name": "oasis.a4.energy_efficiency_vs_figlut",
+      "pass": true,
+      "relative_error": 0.0008327120180750485,
+      "target": 1.44,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 5.561097852411182,
+      "name": "oasis.a4.speedup_vs_a100",
+      "pass": true,
+      "relative_error": 0.02792936273774153,
+      "target": 5.41,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 202.6404186385855,
+      "name": "oasis.a4.energy_efficiency_vs_a100",
+      "pass": true,
+      "relative_error": 0.02291983159306155,
+      "target": 198.1,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 3.1999048186774863,
+      "name": "oasis.a4.speedup_vs_quarot",
+      "pass": true,
+      "relative_error": 0.02561051880688661,
+      "target": 3.12,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 111.30103717139079,
+      "name": "oasis.a4.energy_efficiency_vs_quarot",
+      "pass": true,
+      "relative_error": 0.022987474001753598,
+      "target": 108.8,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_mechanism_ablation",
+      "measured": 1.1845629105608895,
+      "name": "oasis.a4.lookahead_throughput_improvement",
+      "pass": true,
+      "relative_error": 0.02117492289731858,
+      "target": 1.16,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_inferred_figlut",
+      "measured": 3.130434614010174,
+      "name": "oasis.a3.speedup_vs_figlut",
+      "pass": true,
+      "relative_error": 0.006211233647563789,
+      "target": 3.15,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_inferred_figlut",
+      "measured": 1.4388008946939719,
+      "name": "oasis.a3.energy_efficiency_vs_figlut",
+      "pass": true,
+      "relative_error": 0.04715172536823055,
+      "target": 1.51,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 5.561097852411182,
+      "name": "oasis.a3.speedup_vs_a100",
+      "pass": true,
+      "relative_error": 0.01920672796980919,
+      "target": 5.67,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 202.6404186385855,
+      "name": "oasis.a3.energy_efficiency_vs_a100",
+      "pass": true,
+      "relative_error": 0.018833009061223618,
+      "target": 206.53,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 3.1999048186774863,
+      "name": "oasis.a3.speedup_vs_quarot",
+      "pass": true,
+      "relative_error": 0.021435835266823758,
+      "target": 3.27,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_vs_calibrated_roofline_not_native",
+      "measured": 111.30103717139079,
+      "name": "oasis.a3.energy_efficiency_vs_quarot",
+      "pass": true,
+      "relative_error": 0.019892240477361867,
+      "target": 113.56,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_mechanism_ablation",
+      "measured": 1.1087038908539666,
+      "name": "oasis.a3.lookahead_throughput_improvement",
+      "pass": true,
+      "relative_error": 0.060420431479689285,
+      "target": 1.18,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "measured_cacti32_proxy_vs_reported28nm",
+      "measured": 3.478591636115,
+      "name": "oasis.sram_area_cacti32_proxy",
+      "pass": true,
+      "relative_error": 0.09822640671030458,
+      "target": 3.8575,
+      "tolerance": 0.1
+    },
+    {
+      "absolute_error": 3.814697265625e-05,
+      "evidence": "measured",
+      "measured": 3.814697265625e-05,
+      "name": "oasis.functional.lookahead_identity",
+      "pass": true,
+      "target": 0.0,
+      "tolerance": 0.0001,
+      "unit": "absolute_fp32"
+    },
+    {
+      "evidence": "measured_functional",
+      "name": "omni.quantization_compensation_non_regression",
+      "pass": true
+    },
+    {
+      "evidence": "predicted_from_inferred_28nm_coefficients",
+      "measured": 1.2761230560680799,
+      "name": "omni.energy_efficiency_range.minimum",
+      "pass": true,
+      "relative_error": 0.020898444854463884,
+      "target": 1.25,
+      "tolerance": 0.1
+    },
+    {
+      "evidence": "predicted_from_inferred_28nm_coefficients",
+      "measured": 1.9117227383708024,
+      "name": "omni.energy_efficiency_range.maximum",
+      "pass": true,
+      "relative_error": 0.0009019572622002625,
+      "target": 1.91,
+      "tolerance": 0.1
+    }
+  ],
+  "complete": false,
+  "coverage": {
+    "chipyard_full_soc_boot": false,
+    "chipyard_scala_overlay_compile": true,
+    "compiler_simulator_ir_contract": true,
+    "full_rtl_pnr_ppa": false,
+    "oasis_a100_and_quarot_calibrated_rooflines": true,
+    "oasis_a100_and_quarot_native_baselines": false,
+    "oasis_cycle_anchor": true,
+    "oasis_figlut_headline": true,
+    "oasis_functional_core": true,
+    "oasis_lookahead_ablation": true,
+    "oasis_mistral_full_zero_shot": true,
+    "oasis_opt_mistral_full_ppl": true,
+    "oasis_paper_all_models_full_ppl": true,
+    "omni_context_cycle_sweep": true,
+    "omni_functional_core": true,
+    "omni_reported_1p25_to_1p91_energy_range": true,
+    "open_cacti_sram_proxy": true,
+    "open_drampower_lpddr5_proxy": true,
+    "open_rtl_synthesis_proxy": true
+  },
+  "coverage_complete": false,
+  "policy": "pointwise relative error <= 10%; traffic plot uses 0.25 percentage-point tolerance"
+}

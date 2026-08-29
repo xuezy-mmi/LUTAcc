@@ -1,0 +1,988 @@
+{
+  "a3": {
+    "activation_bits": 3,
+    "batch": 1,
+    "comparison_evidence": "predicted_vs_inferred",
+    "geomean_energy_efficiency_improvement": 1.4388008946939719,
+    "geomean_speedup": 3.130434614010174,
+    "points": [
+      {
+        "energy_efficiency_improvement": 1.439641605648125,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 3173760,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 3242213376,
+          "energy_per_token_mj": 28.182354047999997,
+          "evidence": "inferred",
+          "latency_ms": 6.347519999999999,
+          "layer_breakdown": [
+            {
+              "cycles": 24640,
+              "energy_mj": 0.218798272,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 12288
+              }
+            },
+            {
+              "cycles": 8256,
+              "energy_mj": 0.07331162879999999,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 4096
+              }
+            },
+            {
+              "cycles": 44096,
+              "energy_mj": 0.39156366079999994,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 22016
+              }
+            },
+            {
+              "cycles": 22188,
+              "energy_mj": 0.19702500239999998,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 11008,
+                "m": 1,
+                "n": 4096
+              }
+            }
+          ],
+          "model": "llama2-7b",
+          "operations_per_token": 12952010752,
+          "tokens_per_second": 157.54184311353097
+        },
+        "model": "llama2-7b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 1013248,
+          "design": "oasis-a3",
+          "dram_bytes_per_token": 3242213376,
+          "energy_per_token_mj": 19.57595136,
+          "evidence": "predicted",
+          "latency_ms": 2.026496,
+          "layer_breakdown": [
+            {
+              "cycles": 7875,
+              "energy_mj": 0.9415230184727272,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 12288
+              }
+            },
+            {
+              "cycles": 2627,
+              "energy_mj": 0.32459820206247086,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 4096
+              }
+            },
+            {
+              "cycles": 14107,
+              "energy_mj": 1.6741212379599066,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 22016
+              }
+            },
+            {
+              "cycles": 7055,
+              "energy_mj": 0.8389721442802531,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 11008,
+                "m": 1,
+                "n": 4096
+              }
+            }
+          ],
+          "model": "llama2-7b",
+          "operations_per_token": 12952010752,
+          "tokens_per_second": 493.46260737746337
+        },
+        "speedup": 3.1322637695805957
+      },
+      {
+        "energy_efficiency_improvement": 1.4389814123617275,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 6213440,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 6350479360,
+          "energy_per_token_mj": 55.17410451199999,
+          "evidence": "inferred",
+          "latency_ms": 12.426879999999999,
+          "layer_breakdown": [
+            {
+              "cycles": 38480,
+              "energy_mj": 0.34169470399999996,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 15360
+              }
+            },
+            {
+              "cycles": 12880,
+              "energy_mj": 0.114371824,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 5120
+              }
+            },
+            {
+              "cycles": 69200,
+              "energy_mj": 0.6144821599999999,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 27648
+              }
+            },
+            {
+              "cycles": 34776,
+              "energy_mj": 0.3088039248,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 13824,
+                "m": 1,
+                "n": 5120
+              }
+            }
+          ],
+          "model": "llama2-13b",
+          "operations_per_token": 25375539200,
+          "tokens_per_second": 80.47072153267756
+        },
+        "model": "llama2-13b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 1984600,
+          "design": "oasis-a3",
+          "dram_bytes_per_token": 6350479360,
+          "energy_per_token_mj": 38.342472,
+          "evidence": "predicted",
+          "latency_ms": 3.9692,
+          "layer_breakdown": [
+            {
+              "cycles": 12301,
+              "energy_mj": 1.450348821994006,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 15360
+              }
+            },
+            {
+              "cycles": 4103,
+              "energy_mj": 0.4970410964182484,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 5120
+              }
+            },
+            {
+              "cycles": 22139,
+              "energy_mj": 2.5943180926849148,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 27648
+              }
+            },
+            {
+              "cycles": 11072,
+              "energy_mj": 1.2970182722152515,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 13824,
+                "m": 1,
+                "n": 5120
+              }
+            }
+          ],
+          "model": "llama2-13b",
+          "operations_per_token": 25375539200,
+          "tokens_per_second": 251.9399375188955
+        },
+        "speedup": 3.1308273707548118
+      },
+      {
+        "energy_efficiency_improvement": 1.43835959933512,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 15710400,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 16063918080,
+          "energy_per_token_mj": 139.50520991999997,
+          "evidence": "inferred",
+          "latency_ms": 31.4208,
+          "layer_breakdown": [
+            {
+              "cycles": 65000,
+              "energy_mj": 0.5771869999999999,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 19968
+              }
+            },
+            {
+              "cycles": 21736,
+              "energy_mj": 0.19301133279999996,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 6656
+              }
+            },
+            {
+              "cycles": 116584,
+              "energy_mj": 1.0352426032,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 35840
+              }
+            },
+            {
+              "cycles": 58520,
+              "energy_mj": 0.519645896,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 17920,
+                "m": 1,
+                "n": 6656
+              }
+            }
+          ],
+          "model": "llama-30b",
+          "operations_per_token": 64204308480,
+          "tokens_per_second": 31.826051532742643
+        },
+        "model": "llama-30b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 5020140,
+          "design": "oasis-a3",
+          "dram_bytes_per_token": 16063918080,
+          "energy_per_token_mj": 96.9891048,
+          "evidence": "predicted",
+          "latency_ms": 10.040280000000001,
+          "layer_breakdown": [
+            {
+              "cycles": 20784,
+              "energy_mj": 2.4124100568103892,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 19968
+              }
+            },
+            {
+              "cycles": 6931,
+              "energy_mj": 0.8217280068709957,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 6656
+              }
+            },
+            {
+              "cycles": 37301,
+              "energy_mj": 4.308992500968897,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 35840
+              }
+            },
+            {
+              "cycles": 18653,
+              "energy_mj": 2.1546310966132536,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 17920,
+                "m": 1,
+                "n": 6656
+              }
+            }
+          ],
+          "model": "llama-30b",
+          "operations_per_token": 64204308480,
+          "tokens_per_second": 99.59881596927575
+        },
+        "speedup": 3.1294744768074194
+      },
+      {
+        "energy_efficiency_improvement": 1.4382214026963476,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 33489920,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 34247475200,
+          "energy_per_token_mj": 297.383791616,
+          "evidence": "inferred",
+          "latency_ms": 66.97984,
+          "layer_breakdown": [
+            {
+              "cycles": 41088,
+              "energy_mj": 0.36485322239999995,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 10240
+              }
+            },
+            {
+              "cycles": 32896,
+              "energy_mj": 0.2921099008,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 8192
+              }
+            },
+            {
+              "cycles": 229504,
+              "energy_mj": 2.0379496191999995,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 57344
+              }
+            },
+            {
+              "cycles": 115136,
+              "energy_mj": 1.0223846528,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 28672,
+                "m": 1,
+                "n": 8192
+              }
+            }
+          ],
+          "model": "llama2-70b",
+          "operations_per_token": 136902082560,
+          "tokens_per_second": 14.92986546399633
+        },
+        "model": "llama2-70b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 10702480,
+          "design": "oasis-a3",
+          "dram_bytes_per_token": 34247475200,
+          "energy_per_token_mj": 206.7719136,
+          "evidence": "predicted",
+          "latency_ms": 21.40496,
+          "layer_breakdown": [
+            {
+              "cycles": 13119,
+              "energy_mj": 1.5230894918159175,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 10240
+              }
+            },
+            {
+              "cycles": 10496,
+              "energy_mj": 1.2249156761105562,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 8192
+              }
+            },
+            {
+              "cycles": 73442,
+              "energy_mj": 8.381087253039228,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 57344
+              }
+            },
+            {
+              "cycles": 36724,
+              "energy_mj": 4.187508960969697,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 28672,
+                "m": 1,
+                "n": 8192
+              }
+            }
+          ],
+          "model": "llama2-70b",
+          "operations_per_token": 136902082560,
+          "tokens_per_second": 46.718143832083776
+        },
+        "speedup": 3.1291737989699584
+      }
+    ]
+  },
+  "a4": {
+    "activation_bits": 4,
+    "batch": 1,
+    "comparison_evidence": "predicted_vs_inferred",
+    "geomean_energy_efficiency_improvement": 1.4388008946939719,
+    "geomean_speedup": 3.130434614010174,
+    "points": [
+      {
+        "energy_efficiency_improvement": 1.439641605648125,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 3173760,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 3242213376,
+          "energy_per_token_mj": 28.182354047999997,
+          "evidence": "inferred",
+          "latency_ms": 6.347519999999999,
+          "layer_breakdown": [
+            {
+              "cycles": 24640,
+              "energy_mj": 0.218798272,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 12288
+              }
+            },
+            {
+              "cycles": 8256,
+              "energy_mj": 0.07331162879999999,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 4096
+              }
+            },
+            {
+              "cycles": 44096,
+              "energy_mj": 0.39156366079999994,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 22016
+              }
+            },
+            {
+              "cycles": 22188,
+              "energy_mj": 0.19702500239999998,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 11008,
+                "m": 1,
+                "n": 4096
+              }
+            }
+          ],
+          "model": "llama2-7b",
+          "operations_per_token": 12952010752,
+          "tokens_per_second": 157.54184311353097
+        },
+        "model": "llama2-7b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 1013248,
+          "design": "oasis-a4",
+          "dram_bytes_per_token": 3242213376,
+          "energy_per_token_mj": 19.57595136,
+          "evidence": "predicted",
+          "latency_ms": 2.026496,
+          "layer_breakdown": [
+            {
+              "cycles": 7875,
+              "energy_mj": 0.9633292058853147,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 12288
+              }
+            },
+            {
+              "cycles": 2627,
+              "energy_mj": 0.3318669312,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 4096
+              }
+            },
+            {
+              "cycles": 14107,
+              "energy_mj": 1.7131906570741258,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 4096,
+                "m": 1,
+                "n": 22016
+              }
+            },
+            {
+              "cycles": 7055,
+              "energy_mj": 0.8462408734177822,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 11008,
+                "m": 1,
+                "n": 4096
+              }
+            }
+          ],
+          "model": "llama2-7b",
+          "operations_per_token": 12952010752,
+          "tokens_per_second": 493.46260737746337
+        },
+        "speedup": 3.1322637695805957
+      },
+      {
+        "energy_efficiency_improvement": 1.4389814123617275,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 6213440,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 6350479360,
+          "energy_per_token_mj": 55.17410451199999,
+          "evidence": "inferred",
+          "latency_ms": 12.426879999999999,
+          "layer_breakdown": [
+            {
+              "cycles": 38480,
+              "energy_mj": 0.34169470399999996,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 15360
+              }
+            },
+            {
+              "cycles": 12880,
+              "energy_mj": 0.114371824,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 5120
+              }
+            },
+            {
+              "cycles": 69200,
+              "energy_mj": 0.6144821599999999,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 27648
+              }
+            },
+            {
+              "cycles": 34776,
+              "energy_mj": 0.3088039248,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 13824,
+                "m": 1,
+                "n": 5120
+              }
+            }
+          ],
+          "model": "llama2-13b",
+          "operations_per_token": 25375539200,
+          "tokens_per_second": 80.47072153267756
+        },
+        "model": "llama2-13b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 1984600,
+          "design": "oasis-a4",
+          "dram_bytes_per_token": 6350479360,
+          "energy_per_token_mj": 38.342472,
+          "evidence": "predicted",
+          "latency_ms": 3.9692,
+          "layer_breakdown": [
+            {
+              "cycles": 12301,
+              "energy_mj": 1.4776065562597402,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 15360
+              }
+            },
+            {
+              "cycles": 4103,
+              "energy_mj": 0.5061270078401598,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 5120
+              }
+            },
+            {
+              "cycles": 22139,
+              "energy_mj": 2.6433820143632367,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 5120,
+                "m": 1,
+                "n": 27648
+              }
+            },
+            {
+              "cycles": 11072,
+              "energy_mj": 1.306104183637163,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 13824,
+                "m": 1,
+                "n": 5120
+              }
+            }
+          ],
+          "model": "llama2-13b",
+          "operations_per_token": 25375539200,
+          "tokens_per_second": 251.9399375188955
+        },
+        "speedup": 3.1308273707548118
+      },
+      {
+        "energy_efficiency_improvement": 1.43835959933512,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 15710400,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 16063918080,
+          "energy_per_token_mj": 139.50520991999997,
+          "evidence": "inferred",
+          "latency_ms": 31.4208,
+          "layer_breakdown": [
+            {
+              "cycles": 65000,
+              "energy_mj": 0.5771869999999999,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 19968
+              }
+            },
+            {
+              "cycles": 21736,
+              "energy_mj": 0.19301133279999996,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 6656
+              }
+            },
+            {
+              "cycles": 116584,
+              "energy_mj": 1.0352426032,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 35840
+              }
+            },
+            {
+              "cycles": 58520,
+              "energy_mj": 0.519645896,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 17920,
+                "m": 1,
+                "n": 6656
+              }
+            }
+          ],
+          "model": "llama-30b",
+          "operations_per_token": 64204308480,
+          "tokens_per_second": 31.826051532742643
+        },
+        "model": "llama-30b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 5020140,
+          "design": "oasis-a4",
+          "dram_bytes_per_token": 16063918080,
+          "energy_per_token_mj": 96.9891048,
+          "evidence": "predicted",
+          "latency_ms": 10.040280000000001,
+          "layer_breakdown": [
+            {
+              "cycles": 20784,
+              "energy_mj": 2.447845111355844,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 19968
+              }
+            },
+            {
+              "cycles": 6931,
+              "energy_mj": 0.8335396917194805,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 6656
+              }
+            },
+            {
+              "cycles": 37301,
+              "energy_mj": 4.3725938809222775,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 6656,
+                "m": 1,
+                "n": 35840
+              }
+            },
+            {
+              "cycles": 18653,
+              "energy_mj": 2.166442781461738,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 17920,
+                "m": 1,
+                "n": 6656
+              }
+            }
+          ],
+          "model": "llama-30b",
+          "operations_per_token": 64204308480,
+          "tokens_per_second": 99.59881596927575
+        },
+        "speedup": 3.1294744768074194
+      },
+      {
+        "energy_efficiency_improvement": 1.4382214026963476,
+        "figlut": {
+          "batch": 1,
+          "cycles_per_token": 33489920,
+          "design": "figlut-q4",
+          "dram_bytes_per_token": 34247475200,
+          "energy_per_token_mj": 297.383791616,
+          "evidence": "inferred",
+          "latency_ms": 66.97984,
+          "layer_breakdown": [
+            {
+              "cycles": 41088,
+              "energy_mj": 0.36485322239999995,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 10240
+              }
+            },
+            {
+              "cycles": 32896,
+              "energy_mj": 0.2921099008,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 8192
+              }
+            },
+            {
+              "cycles": 229504,
+              "energy_mj": 2.0379496191999995,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 57344
+              }
+            },
+            {
+              "cycles": 115136,
+              "energy_mj": 1.0223846528,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 28672,
+                "m": 1,
+                "n": 8192
+              }
+            }
+          ],
+          "model": "llama2-70b",
+          "operations_per_token": 136902082560,
+          "tokens_per_second": 14.92986546399633
+        },
+        "model": "llama2-70b",
+        "oasis": {
+          "batch": 1,
+          "cycles_per_token": 10702480,
+          "design": "oasis-a4",
+          "dram_bytes_per_token": 34247475200,
+          "energy_per_token_mj": 206.7719136,
+          "evidence": "predicted",
+          "latency_ms": 21.40496,
+          "layer_breakdown": [
+            {
+              "cycles": 13119,
+              "energy_mj": 1.5412613146597403,
+              "operation": "qkv",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 10240
+              }
+            },
+            {
+              "cycles": 10496,
+              "energy_mj": 1.2394531343856143,
+              "operation": "o_proj",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 8192
+              }
+            },
+            {
+              "cycles": 73442,
+              "energy_mj": 8.482849460964635,
+              "operation": "gate_up",
+              "shape": {
+                "batch": 1,
+                "k": 8192,
+                "m": 1,
+                "n": 57344
+              }
+            },
+            {
+              "cycles": 36724,
+              "energy_mj": 4.202046419244755,
+              "operation": "down",
+              "shape": {
+                "batch": 1,
+                "k": 28672,
+                "m": 1,
+                "n": 8192
+              }
+            }
+          ],
+          "model": "llama2-70b",
+          "operations_per_token": 136902082560,
+          "tokens_per_second": 46.718143832083776
+        },
+        "speedup": 3.1291737989699584
+      }
+    ]
+  }
+}
