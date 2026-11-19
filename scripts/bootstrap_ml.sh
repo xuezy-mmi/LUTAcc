@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)"
 PROJECT_DIR="$(cd -- "${SCRIPT_DIR}/.." >/dev/null 2>&1 && pwd -P)"
-PYTHON_BIN="${PYTHON_BIN:-python3.8}"
+PYTHON_BIN="${PYTHON_BIN:-python}"
 VENV_DIR="${ML_VENV_DIR:-${PROJECT_DIR}/.venv-ml}"
 PIP_CACHE_DIR="${PIP_CACHE_DIR:-${PROJECT_DIR}/.pip-cache}"
 export PIP_CACHE_DIR
