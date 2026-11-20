@@ -1,0 +1,25 @@
+[warn] /home/xzy/hwgen/prism/chisel/src/main/scala/prism/SmokeTile.scala:18:12: reflective access of structural type member value clear should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn] This can be achieved by adding the import clause 'import scala.language.reflectiveCalls'
+[warn] or by setting the compiler option -language:reflectiveCalls.
+[warn] See the Scaladoc for value scala.language.reflectiveCalls for a discussion
+[warn] why the feature should be explicitly enabled.
+[warn]   when (io.clear) {
+[warn]            ^
+[warn] /home/xzy/hwgen/prism/chisel/src/main/scala/prism/SmokeTile.scala:22:18: reflective access of structural type member value valid should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn]   }.elsewhen (io.valid) {
+[warn]                  ^
+[warn] /home/xzy/hwgen/prism/chisel/src/main/scala/prism/SmokeTile.scala:24:47: reflective access of structural type member value activation should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn]       accum(row)(col) := accum(row)(col) + io.activation(row) * io.weight(row)(col)
+[warn]                                               ^
+[warn] /home/xzy/hwgen/prism/chisel/src/main/scala/prism/SmokeTile.scala:24:68: reflective access of structural type member value weight should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn]       accum(row)(col) := accum(row)(col) + io.activation(row) * io.weight(row)(col)
+[warn]                                                                    ^
+[warn] /home/xzy/hwgen/prism/chisel/src/main/scala/prism/SmokeTile.scala:27:6: reflective access of structural type member value psum should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn]   io.psum := accum
+[warn]      ^
+[warn] 5 warnings found

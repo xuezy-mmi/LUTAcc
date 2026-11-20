@@ -1,0 +1,85 @@
+{
+  "experiment": "exp2_mac_lut_crossover",
+  "objective": "adp",
+  "model": "PrismCostModel analytical coefficients",
+  "technology_calibrated": false,
+  "reuse_definition": "reuse_factor = (batch_tokens * K) / reference_tile_k; batch_tokens = base M * reuse_multiplier",
+  "reuse_levels": {
+    "low": 1,
+    "medium": 8,
+    "high": 64
+  },
+  "reference_tile_k": 64,
+  "frequency_mhz": 500.0,
+  "array_sizes": [
+    8,
+    16,
+    32
+  ],
+  "dataflows": [
+    "weight_stationary",
+    "output_stationary"
+  ],
+  "precisions": [
+    "W4A8",
+    "W4A16",
+    "W8A8",
+    "W8A16"
+  ],
+  "workloads": [
+    {
+      "name": "Decode",
+      "workload_type": "Decode",
+      "m": 1,
+      "n": 4096,
+      "k": 4096
+    },
+    {
+      "name": "Prefill",
+      "workload_type": "Prefill",
+      "m": 512,
+      "n": 4096,
+      "k": 4096
+    },
+    {
+      "name": "Projection",
+      "workload_type": "Projection",
+      "m": 128,
+      "n": 11008,
+      "k": 4096
+    },
+    {
+      "name": "Attention",
+      "workload_type": "Attention",
+      "m": 256,
+      "n": 256,
+      "k": 128
+    },
+    {
+      "name": "MLP",
+      "workload_type": "MLP",
+      "m": 256,
+      "n": 11008,
+      "k": 4096
+    },
+    {
+      "name": "Decode_MLP",
+      "workload_type": "Decode",
+      "m": 1,
+      "n": 11008,
+      "k": 4096
+    },
+    {
+      "name": "Prefill_MLP",
+      "workload_type": "Prefill",
+      "m": 512,
+      "n": 11008,
+      "k": 4096
+    }
+  ],
+  "rows": {
+    "selections": 2940,
+    "comparisons": 588,
+    "pareto": 13824
+  }
+}

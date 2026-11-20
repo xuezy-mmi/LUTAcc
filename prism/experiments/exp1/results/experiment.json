@@ -1,0 +1,24 @@
+{
+  "backend": "proxy",
+  "frequency_mhz": 500.0,
+  "array": {
+    "rows": 16,
+    "cols": 16,
+    "tile_k": 16
+  },
+  "shapes": 36,
+  "precisions": [
+    "W4A8",
+    "W8A8",
+    "W8A16",
+    "W4A16"
+  ],
+  "primitives": [
+    "mac",
+    "lut",
+    "hybrid"
+  ],
+  "seed": 20260928,
+  "tolerance_pct": 5.0,
+  "correlation_floor": 0.95
+}

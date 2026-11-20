@@ -28,3 +28,6 @@ artifacts/results/quality/*
 !artifacts/results/quality/llama3_8b_oasis_a3_full.json
 rtl/obj_dir/
 *.vcd
+*.py[cod]
+prism/.pytest_cache/
+prism/.claude/
